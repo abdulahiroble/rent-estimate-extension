@@ -1,0 +1,2324 @@
+{
+  "result": [
+    {
+      "id": "09032003-2888-0126-0000-e5c736660cab",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.6383 sec.",
+      "cost": 0.011,
+      "result_count": 1,
+      "path": ["v3", "dataforseo_labs", "ranked_keywords", "live"],
+      "data": {
+        "api": "dataforseo_labs",
+        "function": "ranked_keywords",
+        "target": "bedstegamerlaptop.dk",
+        "location_code": 2208,
+        "language_name": "Danish",
+        "language_code": "da",
+        "location_name": "Denmark",
+        "item_types": ["organic"],
+        "filters": [["keyword_data.keyword_info.search_volume", "<>", 0]],
+        "limit": 10
+      },
+      "result": [
+        {
+          "target": "bedstegamerlaptop.dk",
+          "location_code": 2208,
+          "language_code": "da",
+          "total_count": 134,
+          "items_count": 10,
+          "metrics": {
+            "organic": {
+              "pos_1": 0,
+              "pos_2_3": 0,
+              "pos_4_10": 6,
+              "pos_11_20": 9,
+              "pos_21_30": 7,
+              "pos_31_40": 14,
+              "pos_41_50": 9,
+              "pos_51_60": 15,
+              "pos_61_70": 19,
+              "pos_71_80": 17,
+              "pos_81_90": 21,
+              "pos_91_100": 17,
+              "etv": 92.82882026955485,
+              "impressions_etv": 49.117687825113535,
+              "count": 134,
+              "estimated_paid_traffic_cost": 78.62039851024747,
+              "is_new": 45,
+              "is_up": 37,
+              "is_down": 42,
+              "is_lost": 0
+            },
+            "paid": null,
+            "featured_snippet": null,
+            "local_pack": null
+          },
+          "metrics_absolute": null,
+          "items": [
+            {
+              "keyword_data": {
+                "keyword": "bedste gamer laptop til prisen 2021",
+                "location": 2208,
+                "language": "da",
+                "keyword_info": {
+                  "last_updated_time": "2022-08-15 17:15:45 +00:00",
+                  "competition": null,
+                  "cpc": null,
+                  "search_volume": 30,
+                  "categories": null,
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 40
+                    }
+                  ]
+                },
+                "impressions_info": {
+                  "last_updated_time": "2022-04-17 09:11:10 +00:00",
+                  "bid": 999,
+                  "match_type": "exact",
+                  "ad_position_min": 1.1100000143051147,
+                  "ad_position_max": 1,
+                  "ad_position_average": 1.059999942779541,
+                  "cpc_min": 5.920000076293945,
+                  "cpc_max": 7.239999771118164,
+                  "cpc_average": 6.579999923706055,
+                  "daily_impressions_min": 0.3499999940395355,
+                  "daily_impressions_max": 0.41999998688697815,
+                  "daily_impressions_average": 0.38999998569488525,
+                  "daily_clicks_min": 0.019999999552965164,
+                  "daily_clicks_max": 0.029999999329447746,
+                  "daily_clicks_average": 0.029999999329447746,
+                  "daily_cost_min": 0.1599999964237213,
+                  "daily_cost_max": 0.20000000298023224,
+                  "daily_cost_average": 0.18000000715255737
+                },
+                "bing_keyword_info": {
+                  "last_updated_time": "2022-08-17 21:03:20 +00:00",
+                  "search_volume": null,
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 7,
+                      "search_volume": 0
+                    }
+                  ]
+                },
+                "serp_info": {
+                  "check_url": "https://www.google.dk/search?q=bedste%20gamer%20laptop%20til%20prisen%202021&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                  "serp_item_types": [
+                    "featured_snippet",
+                    "organic",
+                    "people_also_ask",
+                    "related_searches"
+                  ],
+                  "se_results_count": 74,
+                  "keyword_difficulty": null,
+                  "last_updated_time": "2022-07-20 20:39:30 +00:00",
+                  "previous_updated_time": "2022-05-24 17:00:28 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "serp_item": {
+                  "type": "organic",
+                  "rank_group": 5,
+                  "rank_absolute": 7,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[7]/div[1]/div[10]/div[1]/div[2]/div[2]/div[1]/div[1]/div[7]",
+                  "domain": "www.bedstegamerlaptop.dk",
+                  "title": "Bedste Gamer Laptop 2021 - Bedste Gamer Bærbar",
+                  "url": "https://www.bedstegamerlaptop.dk/bedste-gamer-baerbar/",
+                  "breadcrumb": "https://www.bedstegamerlaptop.dk › bedste-gamer-baer...",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "3. Acer Predator Helios 300 · 4. ASUS TUF Gaming FX505DT · 5. Lenovo Legion 5 · 6. Acer Predator Triton 500 · 7. MSI GS66 Stealth.",
+                  "pre_snippet": "06/08/2021 00:00:00",
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": null,
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "bedstegamerlaptop.dk",
+                  "relative_url": "/bedste-gamer-baerbar/",
+                  "etv": 1.406999945640564,
+                  "impressions_etv": 0.5487300157546997,
+                  "estimated_paid_traffic_cost": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": 8,
+                    "is_new": false,
+                    "is_up": true,
+                    "is_down": false
+                  }
+                },
+                "check_url": "https://www.google.dk/search?q=bedste%20gamer%20laptop%20til%20prisen%202021&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                "serp_item_types": [
+                  "featured_snippet",
+                  "organic",
+                  "people_also_ask",
+                  "related_searches"
+                ],
+                "se_results_count": 74,
+                "keyword_difficulty": 15,
+                "is_lost": false,
+                "last_updated_time": "2022-07-20 20:39:30 +00:00",
+                "previous_updated_time": "2022-05-24 17:00:28 +00:00"
+              }
+            },
+            {
+              "keyword_data": {
+                "keyword": "god gamer laptop",
+                "location": 2208,
+                "language": "da",
+                "keyword_info": {
+                  "last_updated_time": "2022-08-16 04:31:28 +00:00",
+                  "competition": 1,
+                  "cpc": 0.550000011920929,
+                  "search_volume": 20,
+                  "categories": [10019, 10168, 10883, 12187, 13069, 13070],
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 70
+                    }
+                  ]
+                },
+                "impressions_info": {
+                  "last_updated_time": "2022-04-19 22:50:59 +00:00",
+                  "bid": 999,
+                  "match_type": "exact",
+                  "ad_position_min": null,
+                  "ad_position_max": null,
+                  "ad_position_average": null,
+                  "cpc_min": null,
+                  "cpc_max": null,
+                  "cpc_average": null,
+                  "daily_impressions_min": null,
+                  "daily_impressions_max": null,
+                  "daily_impressions_average": null,
+                  "daily_clicks_min": null,
+                  "daily_clicks_max": null,
+                  "daily_clicks_average": null,
+                  "daily_cost_min": null,
+                  "daily_cost_max": null,
+                  "daily_cost_average": null
+                },
+                "bing_keyword_info": {
+                  "last_updated_time": "2022-08-21 15:59:41 +00:00",
+                  "search_volume": null,
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 7,
+                      "search_volume": 0
+                    }
+                  ]
+                },
+                "serp_info": {
+                  "check_url": "https://www.google.dk/search?q=god%20gamer%20laptop&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                  "serp_item_types": [
+                    "featured_snippet",
+                    "organic",
+                    "people_also_ask",
+                    "find_results_on",
+                    "local_pack",
+                    "related_searches"
+                  ],
+                  "se_results_count": 20400000,
+                  "keyword_difficulty": null,
+                  "last_updated_time": "2022-05-31 01:57:00 +00:00",
+                  "previous_updated_time": "2022-04-11 05:49:42 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "serp_item": {
+                  "type": "organic",
+                  "rank_group": 6,
+                  "rank_absolute": 7,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[7]/div[1]/div[10]/div[1]/div[2]/div[2]/div[1]/div[1]/div[7]/div[1]",
+                  "domain": "www.bedstegamerlaptop.dk",
+                  "title": "Bedste Gamer Laptop 2021 - Bedste Gamer Bærbar",
+                  "url": "https://www.bedstegamerlaptop.dk/bedste-gamer-baerbar/",
+                  "breadcrumb": "https://www.bedstegamerlaptop.dk › bedste-gamer-baer...",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": null,
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": null,
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Bedste Gamer Laptop 2021 - Bedste Gamer Bærbarhttps://www.bedstegamerlaptop.dk › bedste-gamer-baer...",
+                      "description": null,
+                      "url": "https://www.bedstegamerlaptop.dk/bedste-gamer-baerbar/"
+                    }
+                  ],
+                  "about_this_result": null,
+                  "main_domain": "bedstegamerlaptop.dk",
+                  "relative_url": "/bedste-gamer-baerbar/",
+                  "etv": 0.6759999990463257,
+                  "impressions_etv": null,
+                  "estimated_paid_traffic_cost": 0.3718000054359436,
+                  "rank_changes": {
+                    "previous_rank_absolute": null,
+                    "is_new": true,
+                    "is_up": false,
+                    "is_down": false
+                  }
+                },
+                "check_url": "https://www.google.dk/search?q=god%20gamer%20laptop&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                "serp_item_types": [
+                  "featured_snippet",
+                  "organic",
+                  "people_also_ask",
+                  "find_results_on",
+                  "local_pack",
+                  "related_searches"
+                ],
+                "se_results_count": 20400000,
+                "keyword_difficulty": 46,
+                "is_lost": false,
+                "last_updated_time": "2022-05-31 01:57:00 +00:00",
+                "previous_updated_time": "2022-04-11 05:49:42 +00:00"
+              }
+            },
+            {
+              "keyword_data": {
+                "keyword": "billigste gamer laptop",
+                "location": 2208,
+                "language": "da",
+                "keyword_info": {
+                  "last_updated_time": "2022-08-17 02:27:25 +00:00",
+                  "competition": 1,
+                  "cpc": 0.699999988079071,
+                  "search_volume": 70,
+                  "categories": [
+                    10013, 10015, 10019, 10125, 10167, 10168, 10672, 10883,
+                    11950, 12187, 13851
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 7,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 70
+                    }
+                  ]
+                },
+                "impressions_info": {
+                  "last_updated_time": "2022-04-24 14:37:54 +00:00",
+                  "bid": 999,
+                  "match_type": "exact",
+                  "ad_position_min": null,
+                  "ad_position_max": null,
+                  "ad_position_average": null,
+                  "cpc_min": null,
+                  "cpc_max": null,
+                  "cpc_average": null,
+                  "daily_impressions_min": null,
+                  "daily_impressions_max": null,
+                  "daily_impressions_average": null,
+                  "daily_clicks_min": null,
+                  "daily_clicks_max": null,
+                  "daily_clicks_average": null,
+                  "daily_cost_min": null,
+                  "daily_cost_max": null,
+                  "daily_cost_average": null
+                },
+                "bing_keyword_info": {
+                  "last_updated_time": "2022-08-24 10:10:32 +00:00",
+                  "search_volume": null,
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 7,
+                      "search_volume": 0
+                    }
+                  ]
+                },
+                "serp_info": {
+                  "check_url": "https://www.google.dk/search?q=billigste%20gamer%20laptop&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                  "serp_item_types": [
+                    "featured_snippet",
+                    "organic",
+                    "find_results_on",
+                    "local_pack",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 685000,
+                  "keyword_difficulty": null,
+                  "last_updated_time": "2022-08-23 14:56:58 +00:00",
+                  "previous_updated_time": "2022-07-09 18:57:12 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "serp_item": {
+                  "type": "organic",
+                  "rank_group": 7,
+                  "rank_absolute": 8,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[7]/div[1]/div[11]/div[1]/div[2]/div[2]/div[1]/div[1]/div[8]/div[1]",
+                  "domain": "www.bedstegamerlaptop.dk",
+                  "title": "Bedste Gamer Laptop - Find Billige Gamer Laptops",
+                  "url": "https://www.bedstegamerlaptop.dk/",
+                  "breadcrumb": "https://www.bedstegamerlaptop.dk",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Hjemmesiden for dig som gerne vil have et overblik over de bedste gamer bærbar på markedet.",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": ["gamer"],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "bedstegamerlaptop.dk",
+                  "relative_url": "/",
+                  "etv": 1.7920000553131104,
+                  "impressions_etv": null,
+                  "estimated_paid_traffic_cost": 1.2544000148773193,
+                  "rank_changes": {
+                    "previous_rank_absolute": 8,
+                    "is_new": false,
+                    "is_up": false,
+                    "is_down": false
+                  }
+                },
+                "check_url": "https://www.google.dk/search?q=billigste%20gamer%20laptop&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                "serp_item_types": [
+                  "featured_snippet",
+                  "organic",
+                  "find_results_on",
+                  "local_pack",
+                  "images",
+                  "related_searches"
+                ],
+                "se_results_count": 685000,
+                "keyword_difficulty": 26,
+                "is_lost": false,
+                "last_updated_time": "2022-08-23 14:56:58 +00:00",
+                "previous_updated_time": "2022-07-09 18:57:12 +00:00"
+              }
+            },
+            {
+              "keyword_data": {
+                "keyword": "bedste gamer laptop",
+                "location": 2208,
+                "language": "da",
+                "keyword_info": {
+                  "last_updated_time": "2022-08-16 12:10:33 +00:00",
+                  "competition": 1,
+                  "cpc": 0.5199999809265137,
+                  "search_volume": 40,
+                  "categories": [
+                    10013, 10015, 10019, 10125, 10167, 10168, 10672, 10883,
+                    11950, 12187, 13851
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 70
+                    }
+                  ]
+                },
+                "impressions_info": {
+                  "last_updated_time": "2022-04-21 04:53:18 +00:00",
+                  "bid": 999,
+                  "match_type": "exact",
+                  "ad_position_min": 1.2300000190734863,
+                  "ad_position_max": 1,
+                  "ad_position_average": 1.1200000047683716,
+                  "cpc_min": 304.82000732421875,
+                  "cpc_max": 372.55999755859375,
+                  "cpc_average": 338.69000244140625,
+                  "daily_impressions_min": 8.380000114440918,
+                  "daily_impressions_max": 10.239999771118164,
+                  "daily_impressions_average": 9.3100004196167,
+                  "daily_clicks_min": 0.4399999976158142,
+                  "daily_clicks_max": 0.5400000214576721,
+                  "daily_clicks_average": 0.49000000953674316,
+                  "daily_cost_min": 149.7100067138672,
+                  "daily_cost_max": 182.97999572753906,
+                  "daily_cost_average": 166.35000610351562
+                },
+                "bing_keyword_info": {
+                  "last_updated_time": "2022-08-22 15:03:44 +00:00",
+                  "search_volume": null,
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 7,
+                      "search_volume": 0
+                    }
+                  ]
+                },
+                "serp_info": {
+                  "check_url": "https://www.google.dk/search?q=bedste%20gamer%20laptop&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                  "serp_item_types": [
+                    "featured_snippet",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 458000,
+                  "keyword_difficulty": null,
+                  "last_updated_time": "2022-07-12 22:30:42 +00:00",
+                  "previous_updated_time": "2022-05-17 18:50:43 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "serp_item": {
+                  "type": "organic",
+                  "rank_group": 8,
+                  "rank_absolute": 9,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[7]/div[1]/div[10]/div[1]/div[2]/div[2]/div[1]/div[1]/div[9]",
+                  "domain": "www.bedstegamerlaptop.dk",
+                  "title": "Bedste Gamer Laptop - Find Billige Gamer Laptops",
+                  "url": "https://www.bedstegamerlaptop.dk/",
+                  "breadcrumb": "https://www.bedstegamerlaptop.dk",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Hjemmesiden for dig som gerne vil have et overblik over de bedste gamer bærbar på markedet.",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": ["bedste gamer"],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "bedstegamerlaptop.dk",
+                  "relative_url": "/",
+                  "etv": 0.7879999876022339,
+                  "impressions_etv": 5.5022101402282715,
+                  "estimated_paid_traffic_cost": 0.4097599983215332,
+                  "rank_changes": {
+                    "previous_rank_absolute": 15,
+                    "is_new": false,
+                    "is_up": true,
+                    "is_down": false
+                  }
+                },
+                "check_url": "https://www.google.dk/search?q=bedste%20gamer%20laptop&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                "serp_item_types": [
+                  "featured_snippet",
+                  "organic",
+                  "related_searches"
+                ],
+                "se_results_count": 458000,
+                "keyword_difficulty": 44,
+                "is_lost": false,
+                "last_updated_time": "2022-07-12 22:30:42 +00:00",
+                "previous_updated_time": "2022-05-17 18:50:43 +00:00"
+              }
+            },
+            {
+              "keyword_data": {
+                "keyword": "paracon spawn gamer bord",
+                "location": 2208,
+                "language": "da",
+                "keyword_info": {
+                  "last_updated_time": "2022-08-18 03:51:43 +00:00",
+                  "competition": 0.7099999785423279,
+                  "cpc": null,
+                  "search_volume": 50,
+                  "categories": null,
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 50
+                    }
+                  ]
+                },
+                "impressions_info": {
+                  "last_updated_time": "2022-03-25 07:00:50 +00:00",
+                  "bid": 999,
+                  "match_type": "exact",
+                  "ad_position_min": null,
+                  "ad_position_max": null,
+                  "ad_position_average": null,
+                  "cpc_min": null,
+                  "cpc_max": null,
+                  "cpc_average": null,
+                  "daily_impressions_min": null,
+                  "daily_impressions_max": null,
+                  "daily_impressions_average": null,
+                  "daily_clicks_min": null,
+                  "daily_clicks_max": null,
+                  "daily_clicks_average": null,
+                  "daily_cost_min": null,
+                  "daily_cost_max": null,
+                  "daily_cost_average": null
+                },
+                "bing_keyword_info": {
+                  "last_updated_time": "2022-08-20 15:24:34 +00:00",
+                  "search_volume": 0,
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 7,
+                      "search_volume": 0
+                    }
+                  ]
+                },
+                "serp_info": {
+                  "check_url": "https://www.google.dk/search?q=paracon%20spawn%20gamer%20bord&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                  "serp_item_types": ["organic", "images", "related_searches"],
+                  "se_results_count": 26,
+                  "keyword_difficulty": null,
+                  "last_updated_time": "2022-08-24 14:10:22 +00:00",
+                  "previous_updated_time": "2022-07-10 21:35:28 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "serp_item": {
+                  "type": "organic",
+                  "rank_group": 8,
+                  "rank_absolute": 9,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[7]/div[1]/div[11]/div[1]/div[2]/div[2]/div[1]/div[1]/div[9]/div[1]",
+                  "domain": "www.bedstegamerlaptop.dk",
+                  "title": "Bedste Gamer Bord 2021",
+                  "url": "https://www.bedstegamerlaptop.dk/gamer-skrivebord/",
+                  "breadcrumb": "https://www.bedstegamerlaptop.dk › gamer-skrivebord",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Play M8 Gaming Elite V2 er en perfekt gamer bord for dig som gerne vil ... Paracon SPAWN er gamer skrivebordet for dig som søger efter det ...",
+                  "pre_snippet": "05/04/2021 00:00:00",
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": ["gamer bord", "Paracon SPAWN"],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "bedstegamerlaptop.dk",
+                  "relative_url": "/gamer-skrivebord/",
+                  "etv": 0.9850000143051147,
+                  "impressions_etv": null,
+                  "estimated_paid_traffic_cost": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": 10,
+                    "is_new": false,
+                    "is_up": true,
+                    "is_down": false
+                  }
+                },
+                "check_url": "https://www.google.dk/search?q=paracon%20spawn%20gamer%20bord&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                "serp_item_types": ["organic", "images", "related_searches"],
+                "se_results_count": 26,
+                "keyword_difficulty": 12,
+                "is_lost": false,
+                "last_updated_time": "2022-08-24 14:10:22 +00:00",
+                "previous_updated_time": "2022-07-10 21:35:28 +00:00"
+              }
+            },
+            {
+              "keyword_data": {
+                "keyword": "bedste gaming laptop",
+                "location": 2208,
+                "language": "da",
+                "keyword_info": {
+                  "last_updated_time": "2022-08-17 08:01:32 +00:00",
+                  "competition": 1,
+                  "cpc": 0.5899999737739563,
+                  "search_volume": 70,
+                  "categories": [
+                    10013, 10015, 10019, 10125, 10167, 10168, 10672, 10883,
+                    11950, 12187, 13851
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 7,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 110
+                    }
+                  ]
+                },
+                "impressions_info": {
+                  "last_updated_time": "2022-04-25 05:54:40 +00:00",
+                  "bid": 999,
+                  "match_type": "exact",
+                  "ad_position_min": 1.2300000190734863,
+                  "ad_position_max": 1,
+                  "ad_position_average": 1.1100000143051147,
+                  "cpc_min": 257.0299987792969,
+                  "cpc_max": 314.1499938964844,
+                  "cpc_average": 285.5899963378906,
+                  "daily_impressions_min": 6.960000038146973,
+                  "daily_impressions_max": 8.5,
+                  "daily_impressions_average": 7.730000019073486,
+                  "daily_clicks_min": 0.36000001430511475,
+                  "daily_clicks_max": 0.4399999976158142,
+                  "daily_clicks_average": 0.4000000059604645,
+                  "daily_cost_min": 103.87999725341797,
+                  "daily_cost_max": 126.97000122070312,
+                  "daily_cost_average": 115.41999816894531
+                },
+                "bing_keyword_info": {
+                  "last_updated_time": "2022-08-17 15:42:28 +00:00",
+                  "search_volume": 0,
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 7,
+                      "search_volume": 0
+                    }
+                  ]
+                },
+                "serp_info": {
+                  "check_url": "https://www.google.dk/search?q=bedste%20gaming%20laptop&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                  "serp_item_types": [
+                    "featured_snippet",
+                    "organic",
+                    "people_also_ask",
+                    "local_pack",
+                    "related_searches"
+                  ],
+                  "se_results_count": 395000,
+                  "keyword_difficulty": null,
+                  "last_updated_time": "2022-08-11 13:18:48 +00:00",
+                  "previous_updated_time": "2022-07-04 18:31:03 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "serp_item": {
+                  "type": "organic",
+                  "rank_group": 10,
+                  "rank_absolute": 12,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[7]/div[1]/div[10]/div[1]/div[2]/div[2]/div[1]/div[1]/div[12]/div[1]",
+                  "domain": "www.bedstegamerlaptop.dk",
+                  "title": "Bedste Gamer Laptop - Find Billige Gamer Laptops",
+                  "url": "https://www.bedstegamerlaptop.dk/",
+                  "breadcrumb": "https://www.bedstegamerlaptop.dk",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Hjemmesiden for dig som gerne vil have et overblik over de bedste gamer bærbar på markedet.",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": ["bedste", "bedste"],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "bedstegamerlaptop.dk",
+                  "relative_url": "/",
+                  "etv": 0.7910000085830688,
+                  "impressions_etv": 2.6204700469970703,
+                  "estimated_paid_traffic_cost": 0.4666900038719177,
+                  "rank_changes": {
+                    "previous_rank_absolute": 9,
+                    "is_new": false,
+                    "is_up": false,
+                    "is_down": true
+                  }
+                },
+                "check_url": "https://www.google.dk/search?q=bedste%20gaming%20laptop&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                "serp_item_types": [
+                  "featured_snippet",
+                  "organic",
+                  "people_also_ask",
+                  "local_pack",
+                  "related_searches"
+                ],
+                "se_results_count": 395000,
+                "keyword_difficulty": 61,
+                "is_lost": false,
+                "last_updated_time": "2022-08-11 13:18:48 +00:00",
+                "previous_updated_time": "2022-07-04 18:31:03 +00:00"
+              }
+            },
+            {
+              "keyword_data": {
+                "keyword": "bedste gamer skærm 2021",
+                "location": 2208,
+                "language": "da",
+                "keyword_info": {
+                  "last_updated_time": "2022-08-16 09:29:15 +00:00",
+                  "competition": 1,
+                  "cpc": null,
+                  "search_volume": 30,
+                  "categories": null,
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 30
+                    }
+                  ]
+                },
+                "impressions_info": {
+                  "last_updated_time": "2022-04-20 19:20:27 +00:00",
+                  "bid": 999,
+                  "match_type": "exact",
+                  "ad_position_min": null,
+                  "ad_position_max": null,
+                  "ad_position_average": null,
+                  "cpc_min": null,
+                  "cpc_max": null,
+                  "cpc_average": null,
+                  "daily_impressions_min": null,
+                  "daily_impressions_max": null,
+                  "daily_impressions_average": null,
+                  "daily_clicks_min": null,
+                  "daily_clicks_max": null,
+                  "daily_clicks_average": null,
+                  "daily_cost_min": null,
+                  "daily_cost_max": null,
+                  "daily_cost_average": null
+                },
+                "bing_keyword_info": {
+                  "last_updated_time": "2022-08-22 06:50:52 +00:00",
+                  "search_volume": null,
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 7,
+                      "search_volume": 0
+                    }
+                  ]
+                },
+                "serp_info": {
+                  "check_url": "https://www.google.dk/search?q=bedste%20gamer%20sk%C3%A6rm%202021&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                  "serp_item_types": [
+                    "organic",
+                    "people_also_ask",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 96,
+                  "keyword_difficulty": null,
+                  "last_updated_time": "2022-06-01 22:01:53 +00:00",
+                  "previous_updated_time": "2022-04-12 22:09:34 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "serp_item": {
+                  "type": "organic",
+                  "rank_group": 11,
+                  "rank_absolute": 12,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[7]/div[1]/div[10]/div[1]/div[2]/div[2]/div[1]/div[1]/div[12]",
+                  "domain": "www.bedstegamerlaptop.dk",
+                  "title": "Bedste gamer skærm 2021",
+                  "url": "https://www.bedstegamerlaptop.dk/gamer-skaerm/",
+                  "breadcrumb": "https://www.bedstegamerlaptop.dk › gamer-skaerm",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Bedste gamer skærm 2021. 10-10-2021. 1. AOC C24G1. AOC C24G1. Aoc er en budget gamer skærm hvor du får en del for pengene. Den kommer nemlig med 144 Hz, ...",
+                  "pre_snippet": null,
+                  "extended_snippet": "10. okt. 2021 · Uploadet af Bijan Jamshidi",
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": ["Bedste gamer skærm 2021"],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "bedstegamerlaptop.dk",
+                  "relative_url": "/gamer-skaerm/",
+                  "etv": 0.27300000190734863,
+                  "impressions_etv": null,
+                  "estimated_paid_traffic_cost": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": 9,
+                    "is_new": false,
+                    "is_up": false,
+                    "is_down": true
+                  }
+                },
+                "check_url": "https://www.google.dk/search?q=bedste%20gamer%20sk%C3%A6rm%202021&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                "serp_item_types": [
+                  "organic",
+                  "people_also_ask",
+                  "images",
+                  "related_searches"
+                ],
+                "se_results_count": 96,
+                "keyword_difficulty": 47,
+                "is_lost": false,
+                "last_updated_time": "2022-06-01 22:01:53 +00:00",
+                "previous_updated_time": "2022-04-12 22:09:34 +00:00"
+              }
+            },
+            {
+              "keyword_data": {
+                "keyword": "bedste gaming skærm 2021",
+                "location": 2208,
+                "language": "da",
+                "keyword_info": {
+                  "last_updated_time": "2022-08-16 22:08:16 +00:00",
+                  "competition": 0.5699999928474426,
+                  "cpc": null,
+                  "search_volume": 30,
+                  "categories": null,
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 70
+                    }
+                  ]
+                },
+                "impressions_info": {
+                  "last_updated_time": "2022-04-22 12:26:23 +00:00",
+                  "bid": 999,
+                  "match_type": "exact",
+                  "ad_position_min": null,
+                  "ad_position_max": null,
+                  "ad_position_average": null,
+                  "cpc_min": null,
+                  "cpc_max": null,
+                  "cpc_average": null,
+                  "daily_impressions_min": null,
+                  "daily_impressions_max": null,
+                  "daily_impressions_average": null,
+                  "daily_clicks_min": null,
+                  "daily_clicks_max": null,
+                  "daily_clicks_average": null,
+                  "daily_cost_min": null,
+                  "daily_cost_max": null,
+                  "daily_cost_average": null
+                },
+                "bing_keyword_info": {
+                  "last_updated_time": "2022-08-23 21:19:48 +00:00",
+                  "search_volume": null,
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 7,
+                      "search_volume": 0
+                    }
+                  ]
+                },
+                "serp_info": {
+                  "check_url": "https://www.google.dk/search?q=bedste%20gaming%20sk%C3%A6rm%202021&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                  "serp_item_types": [
+                    "organic",
+                    "people_also_ask",
+                    "related_searches"
+                  ],
+                  "se_results_count": 310000,
+                  "keyword_difficulty": null,
+                  "last_updated_time": "2022-06-01 22:01:49 +00:00",
+                  "previous_updated_time": "2022-04-12 22:09:31 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "serp_item": {
+                  "type": "organic",
+                  "rank_group": 11,
+                  "rank_absolute": 12,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[7]/div[1]/div[10]/div[1]/div[2]/div[2]/div[1]/div[1]/div[12]",
+                  "domain": "www.bedstegamerlaptop.dk",
+                  "title": "Bedste gamer skærm 2021",
+                  "url": "https://www.bedstegamerlaptop.dk/gamer-skaerm/",
+                  "breadcrumb": "https://www.bedstegamerlaptop.dk › gamer-skaerm",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Bedste gamer skærm 2021. 10-10-2021 ... Skærmhastigheden er på 144Hz som er en game changer for dem som spiller first person shooter eller battle royal spil ...",
+                  "pre_snippet": null,
+                  "extended_snippet": "10. okt. 2021 · Uploadet af Bijan Jamshidi",
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": [
+                    "Bedste",
+                    "skærm 2021",
+                    "2021",
+                    "Skærmhastigheden",
+                    "game"
+                  ],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "bedstegamerlaptop.dk",
+                  "relative_url": "/gamer-skaerm/",
+                  "etv": 0.27300000190734863,
+                  "impressions_etv": null,
+                  "estimated_paid_traffic_cost": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": 13,
+                    "is_new": false,
+                    "is_up": true,
+                    "is_down": false
+                  }
+                },
+                "check_url": "https://www.google.dk/search?q=bedste%20gaming%20sk%C3%A6rm%202021&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                "serp_item_types": [
+                  "organic",
+                  "people_also_ask",
+                  "related_searches"
+                ],
+                "se_results_count": 310000,
+                "keyword_difficulty": 47,
+                "is_lost": false,
+                "last_updated_time": "2022-06-01 22:01:49 +00:00",
+                "previous_updated_time": "2022-04-12 22:09:31 +00:00"
+              }
+            },
+            {
+              "keyword_data": {
+                "keyword": "billig gaming laptop",
+                "location": 2208,
+                "language": "da",
+                "keyword_info": {
+                  "last_updated_time": "2022-08-16 11:27:20 +00:00",
+                  "competition": 1,
+                  "cpc": 0.6299999952316284,
+                  "search_volume": 110,
+                  "categories": [
+                    10013, 10015, 10019, 10125, 10167, 10168, 10672, 10883,
+                    11950, 12187, 13851
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 7,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 110
+                    }
+                  ]
+                },
+                "impressions_info": {
+                  "last_updated_time": "2022-04-20 21:26:44 +00:00",
+                  "bid": 999,
+                  "match_type": "exact",
+                  "ad_position_min": 1.1399999856948853,
+                  "ad_position_max": 1,
+                  "ad_position_average": 1.0700000524520874,
+                  "cpc_min": 289.45001220703125,
+                  "cpc_max": 353.7799987792969,
+                  "cpc_average": 321.6099853515625,
+                  "daily_impressions_min": 7.110000133514404,
+                  "daily_impressions_max": 8.699999809265137,
+                  "daily_impressions_average": 7.909999847412109,
+                  "daily_clicks_min": 0.6899999976158142,
+                  "daily_clicks_max": 0.8500000238418579,
+                  "daily_clicks_average": 0.7699999809265137,
+                  "daily_cost_min": 222.97000122070312,
+                  "daily_cost_max": 272.5199890136719,
+                  "daily_cost_average": 247.74000549316406
+                },
+                "bing_keyword_info": {
+                  "last_updated_time": "2022-08-22 08:34:07 +00:00",
+                  "search_volume": null,
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 7,
+                      "search_volume": 0
+                    }
+                  ]
+                },
+                "serp_info": {
+                  "check_url": "https://www.google.dk/search?q=billig%20gaming%20laptop&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                  "serp_item_types": [
+                    "featured_snippet",
+                    "organic",
+                    "people_also_ask",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 86,
+                  "keyword_difficulty": null,
+                  "last_updated_time": "2022-08-08 15:50:45 +00:00",
+                  "previous_updated_time": "2022-06-27 13:39:09 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "serp_item": {
+                  "type": "organic",
+                  "rank_group": 11,
+                  "rank_absolute": 13,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[7]/div[1]/div[10]/div[1]/div[2]/div[2]/div[1]/div[1]/div[13]/div[1]",
+                  "domain": "www.bedstegamerlaptop.dk",
+                  "title": "Bedste Gamer Laptop - Find Billige Gamer Laptops",
+                  "url": "https://www.bedstegamerlaptop.dk/",
+                  "breadcrumb": "https://www.bedstegamerlaptop.dk",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Hjemmesiden for dig som gerne vil have et overblik over de bedste gamer bærbar på markedet.",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": null,
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "bedstegamerlaptop.dk",
+                  "relative_url": "/",
+                  "etv": 1.0010000467300415,
+                  "impressions_etv": 2.1594300270080566,
+                  "estimated_paid_traffic_cost": 0.6306300163269043,
+                  "rank_changes": {
+                    "previous_rank_absolute": 10,
+                    "is_new": false,
+                    "is_up": false,
+                    "is_down": true
+                  }
+                },
+                "check_url": "https://www.google.dk/search?q=billig%20gaming%20laptop&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                "serp_item_types": [
+                  "featured_snippet",
+                  "organic",
+                  "people_also_ask",
+                  "images",
+                  "related_searches"
+                ],
+                "se_results_count": 86,
+                "keyword_difficulty": 26,
+                "is_lost": false,
+                "last_updated_time": "2022-08-08 15:50:45 +00:00",
+                "previous_updated_time": "2022-06-27 13:39:09 +00:00"
+              }
+            },
+            {
+              "keyword_data": {
+                "keyword": "billig gamer laptop",
+                "location": 2208,
+                "language": "da",
+                "keyword_info": {
+                  "last_updated_time": "2022-08-16 06:50:44 +00:00",
+                  "competition": 1,
+                  "cpc": 0.699999988079071,
+                  "search_volume": 70,
+                  "categories": [
+                    10007, 10013, 10015, 10019, 10125, 10167, 10168, 10672,
+                    10883, 11503, 11950, 12187, 13418, 13851
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 7,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 70
+                    }
+                  ]
+                },
+                "impressions_info": {
+                  "last_updated_time": "2022-04-20 06:07:16 +00:00",
+                  "bid": 999,
+                  "match_type": "exact",
+                  "ad_position_min": 1.1299999952316284,
+                  "ad_position_max": 1,
+                  "ad_position_average": 1.0700000524520874,
+                  "cpc_min": 313.94000244140625,
+                  "cpc_max": 383.70001220703125,
+                  "cpc_average": 348.82000732421875,
+                  "daily_impressions_min": 6.889999866485596,
+                  "daily_impressions_max": 8.420000076293945,
+                  "daily_impressions_average": 7.659999847412109,
+                  "daily_clicks_min": 1.0199999809265137,
+                  "daily_clicks_max": 1.25,
+                  "daily_clicks_average": 1.1299999952316284,
+                  "daily_cost_min": 355.69000244140625,
+                  "daily_cost_max": 434.7300109863281,
+                  "daily_cost_average": 395.2099914550781
+                },
+                "bing_keyword_info": {
+                  "last_updated_time": "2022-08-13 00:49:54 +00:00",
+                  "search_volume": 0,
+                  "monthly_searches": [
+                    {
+                      "year": 2022,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2022,
+                      "month": 1,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2021,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2021,
+                      "month": 7,
+                      "search_volume": 0
+                    }
+                  ]
+                },
+                "serp_info": {
+                  "check_url": "https://www.google.dk/search?q=billig%20gamer%20laptop&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                  "serp_item_types": [
+                    "featured_snippet",
+                    "organic",
+                    "find_results_on",
+                    "local_pack",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 75,
+                  "keyword_difficulty": null,
+                  "last_updated_time": "2022-08-23 15:02:18 +00:00",
+                  "previous_updated_time": "2022-07-09 19:01:32 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "serp_item": {
+                  "type": "organic",
+                  "rank_group": 12,
+                  "rank_absolute": 17,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[7]/div[1]/div[11]/div[1]/div[2]/div[2]/div[1]/div[1]/div[15]/div[1]",
+                  "domain": "www.bedstegamerlaptop.dk",
+                  "title": "Bedste Gamer Laptop - Find Billige Gamer Laptops",
+                  "url": "https://www.bedstegamerlaptop.dk/",
+                  "breadcrumb": "https://www.bedstegamerlaptop.dk",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Hjemmesiden for dig som gerne vil have et overblik over de bedste gamer bærbar på markedet.",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": ["gamer"],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "bedstegamerlaptop.dk",
+                  "relative_url": "/",
+                  "etv": 0.5249999761581421,
+                  "impressions_etv": 1.7235000133514404,
+                  "estimated_paid_traffic_cost": 0.3675000071525574,
+                  "rank_changes": {
+                    "previous_rank_absolute": 17,
+                    "is_new": false,
+                    "is_up": false,
+                    "is_down": false
+                  }
+                },
+                "check_url": "https://www.google.dk/search?q=billig%20gamer%20laptop&num=100&hl=da&gl=DK&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCftflO62J0tGEc2S4MPQQ4dS",
+                "serp_item_types": [
+                  "featured_snippet",
+                  "organic",
+                  "find_results_on",
+                  "local_pack",
+                  "images",
+                  "related_searches"
+                ],
+                "se_results_count": 75,
+                "keyword_difficulty": 26,
+                "is_lost": false,
+                "last_updated_time": "2022-08-23 15:02:18 +00:00",
+                "previous_updated_time": "2022-07-09 19:01:32 +00:00"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-custom {
+    --tw-bg-opacity: 1;
+    background-color: rgba(21, 32, 43, var(--tw-bg-opacity));
+  }
+}
+
+:root {
+  --twitter-blue: #1da1f2;
+  --twitter-bg-one: #15202b;
+  --twitter-bg-two: #f7f9f9;
+  --twitter-accent-one: #536471;
+  --twitter-accent-two: #dbe4e6;
+  --twitter-accent-three: #1d9bf0;
+  --twitter-accent-four: #1d9bf01a;
+  --twitter-accent-five: #1a8cd8;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body,
+#__next {
+  @apply h-full;
+}
+
+body {
+  @apply antialiased bg-custom;
+} 
+
+#__next {
+  @apply isolate p-2;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  @apply block max-w-full;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply break-words;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Ghost Traffic",
+  "short_name": "Ghost Traffic",
+  "description": "Ghost Traffic is a browser extension that allows you to view the traffic of any website.",
+  "version": "4.3.7",
+  "manifest_version": 3,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{e7476172-097c-4b77-b56e-f56a894adca9}"
+    }
+  },
+  "icons": {
+    "16": "images/logo16.png",
+    "32": "images/logo32.png",
+    "48": "images/logo48.png",
+    "128": "images/logo128.png"
+  },
+  "permissions": ["storage", "tabs", "geolocation","nativeMessaging"],
+  "content_scripts": [
+    {
+        "matches": ["https://extensionpay.com/*"],
+        "js": ["ExtPay.js"],
+        "run_at": "document_start"
+    }
+],
+  "options_ui": {
+    "page": "customize.html",
+    "open_in_tab": true
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "images/logo16.png",
+      "32": "images/logo32.png",
+      "48": "images/logo48.png"
+    },
+    "default_title": "Customize",
+    "default_popup": "customize.html"
+  }
+}
