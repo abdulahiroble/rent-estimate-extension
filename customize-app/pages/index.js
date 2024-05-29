@@ -34,7 +34,7 @@ const IndexPage = () => {
               getUUID(async (uuid) => {
                 if (uuid.length < 999) {
 
-                  fetch('https://seo-api-traffic.onrender.com', {
+                  fetch('https://rent-estimate-newyork.onrender.com/', {
                     method: 'GET',
                     headers: new Headers({ 'Content-Type': 'application/json' }),
                     credentials: 'same-origin'
@@ -43,15 +43,15 @@ const IndexPage = () => {
                     .then((data) => {
                       saveData(data)
                       getCurrentTabId((tabId) => saveUUID(tabId))
-                      setData({
-                        organicKeywords: data?.tasks?.map((test) => test.result[0].items[0].metrics?.organic.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
-                        organicTraffic: data?.tasks.map((test) => test.result[0].items[0].metrics?.organic.etv.toFixed().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
-                        visibility: data.tasks.map((test) => test.result[0].items[0].metrics?.organic.impressions_etv.toFixed().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
-                        paidTraffic: `${data.tasks.map((test) => test.result[0].items[0].metrics?.organic.estimated_paid_traffic_cost.toFixed().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))}$`,
+                      // setData({
+                      //   organicKeywords: data?.tasks?.map((test) => test.result[0].items[0].metrics?.organic.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
+                      //   organicTraffic: data?.tasks.map((test) => test.result[0].items[0].metrics?.organic.etv.toFixed().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
+                      //   visibility: data.tasks.map((test) => test.result[0].items[0].metrics?.organic.impressions_etv.toFixed().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
+                      //   paidTraffic: `${data.tasks.map((test) => test.result[0].items[0].metrics?.organic.estimated_paid_traffic_cost.toFixed().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))}$`,
 
-                        monthAndYear: data,
-                        traffic: data
-                      })
+                      //   monthAndYear: data,
+                      //   traffic: data
+                      // })
                     })
 
                   // const location = await getLocation()
@@ -125,7 +125,7 @@ const IndexPage = () => {
               getUUID(async (uuid) => {
                 if (uuid.length < 1) {
 
-                  fetch('https://seo-api-traffic.onrender.com', {
+                  fetch('https://rent-estimate-newyork.onrender.com/', {
                     method: 'GET',
                     headers: new Headers({ 'Content-Type': 'application/json' }),
                     credentials: 'same-origin'
@@ -134,15 +134,15 @@ const IndexPage = () => {
                     .then((data) => {
                       saveData(data)
                       getCurrentTabId((tabId) => saveUUID(tabId))
-                      setData({
-                        organicKeywords: data?.tasks?.map((test) => test.result[0].items[0].metrics?.organic.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
-                        organicTraffic: data?.tasks.map((test) => test.result[0].items[0].metrics?.organic.etv.toFixed().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
-                        visibility: data.tasks.map((test) => test.result[0].items[0].metrics?.organic.impressions_etv.toFixed().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
-                        paidTraffic: `${data.tasks.map((test) => test.result[0].items[0].metrics?.organic.estimated_paid_traffic_cost.toFixed().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))}$`,
+                      // setData({
+                      //   organicKeywords: data?.tasks?.map((test) => test.result[0].items[0].metrics?.organic.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
+                      //   organicTraffic: data?.tasks.map((test) => test.result[0].items[0].metrics?.organic.etv.toFixed().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
+                      //   visibility: data.tasks.map((test) => test.result[0].items[0].metrics?.organic.impressions_etv.toFixed().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
+                      //   paidTraffic: `${data.tasks.map((test) => test.result[0].items[0].metrics?.organic.estimated_paid_traffic_cost.toFixed().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))}$`,
 
-                        monthAndYear: data,
-                        traffic: data
-                      })
+                      //   monthAndYear: data,
+                      //   traffic: data
+                      // })
                     })
 
                   // const location = await getLocation()

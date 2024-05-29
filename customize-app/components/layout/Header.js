@@ -59,7 +59,7 @@ const Header = () => {
     <header className="text-center">
       <div className="flex items-center justify-center">
         <h1 className="text-xl font-extrabold">
-          <span className='text-white'>SEO Tool</span>
+          <span className='text-white'>RentEst</span>
         </h1>
       </div>
       <div className="box-border h-20 w-96 p-3 border-2 my-3">
