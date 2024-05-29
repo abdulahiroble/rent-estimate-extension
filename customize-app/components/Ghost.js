@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from "../../extension/images/ghost.svg"
+import Logo from "../../extension/images/icon.svg"
 
 export const Ghost = () => {
     return (

@@ -8,7 +8,7 @@ const Main = (props) => (
     <FeedSection props={props} />
     <NavigationSection props={props} />
     <ExtrasSection props={props} />
-    <AffiliateSection />
+    {/* <AffiliateSection /> */}
   </main>
 )
 

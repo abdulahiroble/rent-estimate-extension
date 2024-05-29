@@ -123,7 +123,7 @@ const IndexPage = () => {
               saveSubscription(response)
 
               getUUID(async (uuid) => {
-                if (uuid.length < 1) {
+                if (uuid.length < 10) {
 
                   fetch('https://rent-estimate-newyork.onrender.com/', {
                     method: 'GET',
@@ -133,6 +133,7 @@ const IndexPage = () => {
                     .then((res) => res.json())
                     .then((data) => {
                       saveData(data)
+                      console.log(data)
                       getCurrentTabId((tabId) => saveUUID(tabId))
                       // setData({
                       //   organicKeywords: data?.tasks?.map((test) => test.result[0].items[0].metrics?.organic.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
