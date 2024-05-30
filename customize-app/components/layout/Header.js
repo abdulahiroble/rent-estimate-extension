@@ -62,9 +62,9 @@ const Header = () => {
           <span className='text-white'>RentEst</span>
         </h1>
       </div>
-      <div className="box-border h-20 w-96 p-3 border-2 my-3">
+      <div className="box-border h-20 w-96 mx-auto p-3 border-2 my-3">
         <div className="flex text-lg">
-          <div className="text-white">Domain:</div>
+          <div className="text-white">Address:</div>
           <div className="font-bold ml-2 text-white flex justify-start">
             {urlBar}
           </div>

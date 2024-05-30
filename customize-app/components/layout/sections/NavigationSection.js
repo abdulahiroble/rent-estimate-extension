@@ -8,7 +8,7 @@ const NavigationSection = (props) => (
       htmlFor="user-control-navigation"
       className="text-sm font-bold dark:text-twitterAccentOneDark text-twitterAccentOne"
     >
-      Listing <Tooltip label="Shows the website's traffic changes over the last six months.
+      Listings <Tooltip label="Shows comparable rental listings based on the address.
       " fontSize="md" placement='right-start'><QuestionIcon fontSize="sm" mt={-1} /></Tooltip>
     </label>
     <div id="user-control-navigation">

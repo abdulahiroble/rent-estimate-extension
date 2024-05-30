@@ -19,9 +19,7 @@ const FeedSection = (props) => {
         htmlFor="user-control-feed-width"
         className="text-sm font-bold dark:text-twitterAccentOneDark text-twitterAccentOne"
       >
-        General <Tooltip label="*Organic keywords:* Website's ranked keywords. *Monthly traffic:* Visitors per month.
-*Visibility trend:* Website's search result visibility via paid traffic.
-*Paid traffic cost:* Cost of recent paid traffic." fontSize="md" placement='right-start'><QuestionIcon fontSize="sm" mt={-1} /></Tooltip>
+        Rent Estimate <Tooltip label="Shows rent estimate based with ranges from average to high and low." fontSize="md" placement='right-start'><QuestionIcon fontSize="sm" mt={-1} /></Tooltip>
       </label>
       {/* {mounted ? (
         <div
@@ -36,11 +34,11 @@ const FeedSection = (props) => {
         <div className="dark:bg-twitterBgTwoDark bg-twitterBgTwo rounded-2xl animate-pulse h-[115.5px]" />
       )} */}
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-3 gap-4">
         <OrganicKeywords organicKeywords={props.props.props?.organicKeywords} />
         <OrganicMonthlyTraffic organicTraffic={props.props.props?.organicTraffic} />
         <VisibilityTrend visibility={props.props.props?.visibility} />
-        <PaidTraffic paidTraffic={props.props.props?.paidTraffic} />
+        {/* <PaidTraffic paidTraffic={props.props.props?.paidTraffic} /> */}
         {/* <Posts /> */}
       </div>
 

@@ -7,7 +7,7 @@ const Main = (props) => (
   <main className="flex flex-col p-2 space-y-4">
     <FeedSection props={props} />
     <NavigationSection props={props} />
-    <ExtrasSection props={props} />
+    {/* <ExtrasSection props={props} /> */}
     {/* <AffiliateSection /> */}
   </main>
 )
