@@ -46,7 +46,6 @@ const Header = () => {
             }
           })
         } else {
-          console.log('Country from storage', country.code)
           setLocation(country)
         }
       })

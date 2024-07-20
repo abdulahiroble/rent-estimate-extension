@@ -14,8 +14,9 @@
     /* background-image: linear-gradient(109.4deg, #fbd69b 10%, #f6b973 90%); */
     /* background-image: linear-gradient(109.4deg, #ffcc99 10%, #ff9933 90%); */
     /* background-image: linear-gradient(109.4deg, #FFDAB9 10%, #FD8E2E 90%); */
-    background-image: linear-gradient(109.4deg, #FFC04E 10%, #FD8E2E 90%);
 
+    /* background-image: linear-gradient(109.4deg, #456fe8 10%, #3e7ae9 90%); */
+    background-image: linear-gradient(109.4deg, #295270 10%, #304f71 90%);
   }
 }
 
@@ -42,7 +43,7 @@ body,
 
 body {
   @apply antialiased bg-custom;
-} 
+}
 
 #__next {
   @apply isolate p-2;

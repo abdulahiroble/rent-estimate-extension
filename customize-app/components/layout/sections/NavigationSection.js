@@ -6,7 +6,7 @@ const NavigationSection = (props) => (
   <section className="flex flex-col space-y-2">
     <label
       htmlFor="user-control-navigation"
-      className="text-sm font-bold dark:text-twitterAccentOneDark text-twitterAccentOne"
+      className="text-sm font-bold text-white dark:text-gray-200"
     >
       Listings <Tooltip label="Shows comparable rental listings based on the address.
       " fontSize="md" placement='right-start'><QuestionIcon fontSize="sm" mt={-1} /></Tooltip>

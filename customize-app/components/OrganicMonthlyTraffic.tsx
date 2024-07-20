@@ -26,7 +26,7 @@ export const OrganicMonthlyTraffic = ({ organicTraffic }) => {
         })
     }, [organicTraffic])
 
-    if (isLoading) return <SkeletonTheme baseColor="#21343F" highlightColor='#263F4D' height={100}>
+    if (isLoading) return <SkeletonTheme baseColor="#275F86" highlightColor='#256C9B' height={100}>
         <>
             <Skeleton />
         </>

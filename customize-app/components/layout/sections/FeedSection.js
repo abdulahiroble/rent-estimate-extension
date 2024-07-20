@@ -11,13 +11,11 @@ import { QuestionIcon } from '@chakra-ui/icons'
 import { Posts } from "../../Posts"
 
 const FeedSection = (props) => {
-  // console.log(props.props.props.tasks?.map((test) => test.result[0].items[0].metrics?.organic.count))
-
   return (
     <section className="flex flex-col space-y-2">
       <label
         htmlFor="user-control-feed-width"
-        className="text-sm font-bold dark:text-twitterAccentOneDark text-twitterAccentOne"
+        className="text-sm font-bold text-white dark:text-gray-200"
       >
         Rent Estimate <Tooltip label="Shows rent estimate based with ranges from average to high and low." fontSize="md" placement='right-start'><QuestionIcon fontSize="sm" mt={-1} /></Tooltip>
       </label>
@@ -35,7 +33,7 @@ const FeedSection = (props) => {
       )} */}
 
       <div className="grid grid-cols-3 gap-4">
-        <OrganicKeywords organicKeywords={props.props.props?.organicKeywords} />
+        <OrganicKeywords rent={props.props.props?.rent} />
         <OrganicMonthlyTraffic organicTraffic={props.props.props?.organicTraffic} />
         <VisibilityTrend visibility={props.props.props?.visibility} />
         {/* <PaidTraffic paidTraffic={props.props.props?.paidTraffic} /> */}
