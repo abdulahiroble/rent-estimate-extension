@@ -4,7 +4,7 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { readData } from '../utilities/chromeStorage';
 
-export const VisibilityTrend = ({ visibility }) => {
+export const VisibilityTrend = ({ rentRangeHigh }) => {
 
     const [data, setData] = useState(null)
     const [isLoading, setLoading] = useState(false)
@@ -12,9 +12,9 @@ export const VisibilityTrend = ({ visibility }) => {
     useEffect(() => {
         setLoading(true)
         setData(() => {
-            if (visibility) {
+            if (rentRangeHigh) {
                 setLoading(false)
-                return visibility
+                return rentRangeHigh
             } else {
                 readData(async (data) => {
                     if (data) {
@@ -25,7 +25,7 @@ export const VisibilityTrend = ({ visibility }) => {
                 )
             }
         })
-    }, [visibility])
+    }, [rentRangeHigh])
 
     if (isLoading) return <SkeletonTheme baseColor="#275F86" highlightColor='#256C9B' height={100}>
         <>
@@ -36,9 +36,9 @@ export const VisibilityTrend = ({ visibility }) => {
 
 
     return (
-        <div className="p-5 pb-5 bg-twitterBgTwoDark rounded-2xl">
-            <div className='text-lg mb-2 text-white'>Visibility Trend</div>
-            <div className='text-2xl font-bold text-sky-400'>{!visibility ? data : visibility}</div>
+        <div className="p-5 pb-5 rounded-2xl" style={{ backgroundColor:  "#275F86"}}>
+            <div className='text-xl font-bold mb-2 text-gray-50'>Rent High Range</div>
+            <div className='text-2xl font-bold text-red-500'>{!rentRangeHigh ? `$${data}` : `$${rentRangeHigh}`}</div>
         </div>
     )
 }

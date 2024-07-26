@@ -33,9 +33,9 @@ const FeedSection = (props) => {
       )} */}
 
       <div className="grid grid-cols-3 gap-4">
-        <OrganicKeywords rent={props.props.props?.rent} />
-        <OrganicMonthlyTraffic organicTraffic={props.props.props?.organicTraffic} />
-        <VisibilityTrend visibility={props.props.props?.visibility} />
+        <OrganicKeywords rentRangeLow={props.props.props?.rentRangeLow} />
+        <OrganicMonthlyTraffic rent={props.props.props?.rent} />
+        <VisibilityTrend rentRangeHigh={props.props.props?.rentRangeHigh}/>
         {/* <PaidTraffic paidTraffic={props.props.props?.paidTraffic} /> */}
         {/* <Posts /> */}
       </div>

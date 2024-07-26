@@ -3,20 +3,20 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { readData, saveData } from '../utilities/chromeStorage'
 interface RentProps {
-    rent: any
+    rentRangeLow: any
 }
 
-export const OrganicKeywords: React.FunctionComponent<RentProps> = ({ rent }) => {
-    console.log(`rent`, rent)
+export const OrganicKeywords: React.FunctionComponent<RentProps> = ({ rentRangeLow }) => {
+    console.log(`rentRangeLow`, rentRangeLow)
     const [data, setData] = useState([])
     const [isLoading, setLoading] = useState(false)
 
     useEffect(() => {
         setLoading(true)
         setData(() => {
-            if (rent) {
+            if (rentRangeLow) {
                 setLoading(false)
-                return rent
+                return rentRangeLow
             } else {
                 readData(async (data) => {
                     if (data) {
@@ -27,7 +27,7 @@ export const OrganicKeywords: React.FunctionComponent<RentProps> = ({ rent }) =>
                 )
             }
         })
-    }, [rent])
+    }, [rentRangeLow])
 
     if (isLoading) return <SkeletonTheme baseColor="#275F86" highlightColor='#256C9B' height={100}>
         <>
@@ -38,8 +38,8 @@ export const OrganicKeywords: React.FunctionComponent<RentProps> = ({ rent }) =>
 
     return (
         <div className="p-5 pb-5 rounded-2xl" style={{ backgroundColor:  "#275F86"}}>
-            <div className='text-lg mb-2 text-white'>Rent</div>
-            <div className='text-2xl font-bold text-sky-400'>{!rent ? data : rent}</div>
+            <div className='text-xl font-bold mb-2 text-gray-50'>Rent Low Range</div>
+            <div className='text-2xl font-bold text-green-500'>{!rentRangeLow ? `$${data}` : `$${rentRangeLow}`}</div>
         </div>
     )
 

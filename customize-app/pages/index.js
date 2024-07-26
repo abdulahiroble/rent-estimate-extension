@@ -137,7 +137,9 @@ const IndexPage = () => {
                       console.log(data)
                       getCurrentTabId((tabId) => saveUUID(tabId))
                       setData({
-                        rent: data?.rent
+                        rent: data?.rent,
+                        rentRangeLow: data?.rentRangeLow,
+                        rentRangeHigh: data?.rentRangeHigh
                         // organicKeywords: data?.tasks?.map((test) => test.result[0].items[0].metrics?.organic.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
                         // organicTraffic: data?.tasks.map((test) => test.result[0].items[0].metrics?.organic.etv.toFixed().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
                         // visibility: data.tasks.map((test) => test.result[0].items[0].metrics?.organic.impressions_etv.toFixed().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),

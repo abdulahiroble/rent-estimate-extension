@@ -3,7 +3,7 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { readData } from '../utilities/chromeStorage'
 
-export const OrganicMonthlyTraffic = ({ organicTraffic }) => {
+export const OrganicMonthlyTraffic = ({ rent }) => {
 
     const [data, setData] = useState(null)
     const [isLoading, setLoading] = useState(false)
@@ -11,9 +11,9 @@ export const OrganicMonthlyTraffic = ({ organicTraffic }) => {
     useEffect(() => {
         setLoading(true)
         setData(() => {
-            if (organicTraffic) {
+            if (rent) {
                 setLoading(false)
-                return organicTraffic
+                return rent
             } else {
                 readData(async (data) => {
                     if (data) {
@@ -24,7 +24,7 @@ export const OrganicMonthlyTraffic = ({ organicTraffic }) => {
                 )
             }
         })
-    }, [organicTraffic])
+    }, [rent])
 
     if (isLoading) return <SkeletonTheme baseColor="#275F86" highlightColor='#256C9B' height={100}>
         <>
@@ -35,9 +35,9 @@ export const OrganicMonthlyTraffic = ({ organicTraffic }) => {
 
 
     return (
-        <div className="p-5 pb-5 bg-twitterBgTwoDark rounded-2xl">
-            <div className='text-lg mb-2 text-white'>Monthly Traffic</div>
-            <div className='text-2xl font-bold text-sky-400'>{!organicTraffic ? data : organicTraffic}</div>
+        <div className="p-5 pb-5 rounded-2xl" style={{ backgroundColor:  "#275F86"}}>
+            <div className='text-xl font-bold mb-2 text-gray-50'>Average Rent</div>
+            <div className='text-2xl font-bold text-yellow-400'>{!rent ? `$${data}` : `$${rent}`}</div>
         </div>
     )
 }
