@@ -139,7 +139,8 @@ const IndexPage = () => {
                       setData({
                         rent: data?.rent,
                         rentRangeLow: data?.rentRangeLow,
-                        rentRangeHigh: data?.rentRangeHigh
+                        rentRangeHigh: data?.rentRangeHigh,
+                        listings: data?.comparables
                         // organicKeywords: data?.tasks?.map((test) => test.result[0].items[0].metrics?.organic.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
                         // organicTraffic: data?.tasks.map((test) => test.result[0].items[0].metrics?.organic.etv.toFixed().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
                         // visibility: data.tasks.map((test) => test.result[0].items[0].metrics?.organic.impressions_etv.toFixed().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),

@@ -7,7 +7,6 @@ interface RentProps {
 }
 
 export const OrganicKeywords: React.FunctionComponent<RentProps> = ({ rentRangeLow }) => {
-    console.log(`rentRangeLow`, rentRangeLow)
     const [data, setData] = useState([])
     const [isLoading, setLoading] = useState(false)
 
@@ -21,7 +20,7 @@ export const OrganicKeywords: React.FunctionComponent<RentProps> = ({ rentRangeL
                 readData(async (data) => {
                     if (data) {
                         setLoading(false)
-                        setData(data?.tasks?.map((test) => test.result[0].items[0].metrics?.organic.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")))
+                        // setData(data?.tasks?.map((test) => test.result[0].items[0].metrics?.organic.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")))
                     }
                 }
                 )
@@ -38,7 +37,7 @@ export const OrganicKeywords: React.FunctionComponent<RentProps> = ({ rentRangeL
 
     return (
         <div className="p-5 pb-5 rounded-2xl" style={{ backgroundColor:  "#275F86"}}>
-            <div className='text-xl font-bold mb-2 text-gray-50'>Rent Low Range</div>
+            <div className='text-2xl font-bold mb-2 text-gray-50'>Low</div>
             <div className='text-2xl font-bold text-green-500'>{!rentRangeLow ? `$${data}` : `$${rentRangeLow}`}</div>
         </div>
     )

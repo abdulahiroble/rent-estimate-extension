@@ -14,7 +14,7 @@ const NavigationSection = (props) => (
     <div id="user-control-navigation">
       {/* <Navigation /> */}
       {/* <Line /> */}
-      <Listings />
+      <Listings listings={props.props.props} />
       {/* <LineChart monthAndYear={props.props.props?.monthAndYear} traffic={props.props.props?.traffic} /> */}
     </div>
   </section>

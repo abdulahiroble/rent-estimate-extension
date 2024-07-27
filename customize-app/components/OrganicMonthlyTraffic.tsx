@@ -36,7 +36,7 @@ export const OrganicMonthlyTraffic = ({ rent }) => {
 
     return (
         <div className="p-5 pb-5 rounded-2xl" style={{ backgroundColor:  "#275F86"}}>
-            <div className='text-xl font-bold mb-2 text-gray-50'>Average Rent</div>
+            <div className='text-2xl font-bold mb-2 text-gray-50'>Average</div>
             <div className='text-2xl font-bold text-yellow-400'>{!rent ? `$${data}` : `$${rent}`}</div>
         </div>
     )

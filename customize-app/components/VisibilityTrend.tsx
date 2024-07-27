@@ -37,7 +37,7 @@ export const VisibilityTrend = ({ rentRangeHigh }) => {
 
     return (
         <div className="p-5 pb-5 rounded-2xl" style={{ backgroundColor:  "#275F86"}}>
-            <div className='text-xl font-bold mb-2 text-gray-50'>Rent High Range</div>
+            <div className='text-2xl font-bold mb-2 text-gray-50'>High</div>
             <div className='text-2xl font-bold text-red-500'>{!rentRangeHigh ? `$${data}` : `$${rentRangeHigh}`}</div>
         </div>
     )
