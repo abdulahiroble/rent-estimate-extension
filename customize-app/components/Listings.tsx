@@ -2,13 +2,30 @@ import { Container, Flex, VStack, Heading, HStack, Tag, Button, Text } from '@ch
 import React, { useEffect, useState } from 'react'
 import Carousel from './Carousel';
 import capsFirst from '../utilities/capsFirst';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 
 const Listings = ({listings}) => {
     const [data, setData] = useState([]);
+    const [isLoading, setLoading] = useState(false)
 
     useEffect(() => {
-        setData(listings?.listings || []);
+        setLoading(true)
+        setData(() => {
+            if (listings) {
+                setLoading(false)
+                return listings.listings
+            }
+        });
+
     }, [listings])
+
+    if (isLoading) return <SkeletonTheme baseColor="#275F86" highlightColor='#256C9B' height={100}>
+        <>
+            <Skeleton />
+        </>
+    </SkeletonTheme>
+
+    if (!data) return <p>No profile data</p>
 
     return (
         <div>
@@ -18,7 +35,7 @@ const Listings = ({listings}) => {
                 maxW="container.md"
             >
                 <Carousel gap={32}>
-                    {data.map((listing, index) => (
+                    {data && data.map((listing, index) => (
                         <Flex
                             key={index}
                             boxShadow="rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
