@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react'
 import Carousel from './Carousel';
 import capsFirst from '../utilities/capsFirst';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+import { readData } from '../utilities/chromeStorage';
 
-const Listings = ({listings}) => {
+const Listings = ({ listings }) => {
     const [data, setData] = useState([]);
     const [isLoading, setLoading] = useState(false)
 
@@ -14,6 +15,14 @@ const Listings = ({listings}) => {
             if (listings) {
                 setLoading(false)
                 return listings.listings
+            } else {
+                readData(async (data) => {
+                    if (data) {
+                        console.log('saved data', data)
+                        setLoading(false)
+                        setData(data.comparables)
+                    }
+                })
             }
         });
 
@@ -35,7 +44,7 @@ const Listings = ({listings}) => {
                 maxW="container.md"
             >
                 <Carousel gap={32}>
-                    {data && data.map((listing, index) => (
+                    {data && data?.map((listing, index) => (
                         <Flex
                             key={index}
                             boxShadow="rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
