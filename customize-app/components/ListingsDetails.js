@@ -44,12 +44,12 @@ const ListingDetails = ({ listing, onBack }) => {
         <Text fontSize="md">
           County: {listingData.county}
         </Text>
-        <Text fontSize="md">
+        {/* <Text fontSize="md">
           Latitude: {listingData.latitude}
         </Text>
         <Text fontSize="md">
           Longitude: {listingData.longitude}
-        </Text>
+        </Text> */}
         {listingData.yearBuilt && (
           <Text fontSize="md">
             Year Built: {listingData.yearBuilt}

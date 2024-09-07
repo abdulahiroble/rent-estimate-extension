@@ -14,6 +14,8 @@ const IndexPage = () => {
   const [data, setData] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
   const [showFrontdoor, setShowFrontdoor] = useState(true);
+  const [urlBar, setUrlBar] = useState('');
+  const [state, setState] = useState('');
   const currentDate = moment();
   const formattedDate = currentDate.format("MMM DD, YYYY");
 
@@ -22,17 +24,30 @@ const IndexPage = () => {
     if (option === 'currentLocation') {
       // Fetch rent estimate based on current location
       const location = await getLocation();
-      // Add your fetch logic here
+      const latitude = location.coords.latitude;
+      const longitude = location.coords.longitude;
+      const apiUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&accept-language=en`;
+      const response = await axios.get(apiUrl);
+      const state = response?.data?.address?.state;
+
+      setState(state);
+      setUrlBar('');
     } else if (option === 'search') {
       // Fetch rent estimate based on input search
       try {
-        const response = await fetch(`https://rent-estimate-newyork.onrender.com/?location=${query}`, {
-          method: 'GET',
-          headers: new Headers({ 'Content-Type': 'application/json' }),
-          credentials: 'same-origin'
-        });
+        const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${query}&accept-language=en`);
         const data = await response.json();
-        setData(data);
+        if (data.length > 0) {
+          const { lat, lon } = data[0];
+          const apiUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&accept-language=en`;
+          const reverseResponse = await axios.get(apiUrl);
+          const state = reverseResponse?.data?.address?.state;
+
+          setState(state);
+          setUrlBar(query);
+        } else {
+          setErrorMessage('Address not found.');
+        }
       } catch (error) {
         setErrorMessage('Failed to fetch rent estimate.');
       }
@@ -143,7 +158,7 @@ const IndexPage = () => {
 
   return (
     <Container>
-      <Header />
+      <Header urlBar={urlBar} state={state} />
       {errorMessage && <div>{errorMessage}</div>}
       <Main props={data} />
       <Footer />
