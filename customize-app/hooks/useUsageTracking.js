@@ -116,11 +116,11 @@ export function useUsageTracking() {
     }
 
     if (stats.isExceeded) {
-      return `Quota exceeded. Upgrade to continue.`
+      return `Monthly lookup limit reached. Upgrade to unlimited searches.`
     }
 
     if (stats.shouldWarn) {
-      return `${stats.remaining} lookup${stats.remaining !== 1 ? 's' : ''} remaining this month`
+      return `${stats.remaining} lookup${stats.remaining !== 1 ? 's' : ''} remaining this month. Upgrade for unlimited.`
     }
 
     return null

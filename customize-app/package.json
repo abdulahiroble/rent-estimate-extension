@@ -12,11 +12,13 @@
   },
   "dependencies": {
     "@types/chrome": "^0.0.198",
+    "@types/leaflet.markercluster": "^1.5.6",
     "axios": "^1.6.0",
     "chart.js": "^3.9.1",
     "dotenv": "^16.0.3",
     "extpay": "^3.0.7",
     "leaflet": "^1.9.4",
+    "leaflet.markercluster": "^1.5.3",
     "lodash.throttle": "^4.1.1",
     "moment": "^2.29.4",
     "next": "^13.3.0",

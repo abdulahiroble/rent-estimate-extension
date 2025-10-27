@@ -426,7 +426,7 @@
           11,
           12
         ],
-        "status": "pending",
+        "status": "done",
         "subtasks": []
       },
       {
@@ -599,11 +599,82 @@
         ],
         "status": "pending",
         "subtasks": []
+      },
+      {
+        "id": 26,
+        "title": "Implement Tiered Aggressive Caching Strategy",
+        "description": "Increase cache TTL to 7 days for free tier users and 30 days for premium tier users to reduce repeat API calls and lower operational costs.",
+        "details": "Update the caching logic to support tiered TTL values based on user subscription status. For free tier users, set cache entries to expire after 7 days; for premium users, set expiry to 30 days. Ensure the cache service can dynamically assign TTL based on user type, and update cache-control headers accordingly. Refactor cache invalidation and expiry logic to handle longer lifespans and prevent stale data issues. Monitor cache hit rates and eviction patterns to validate effectiveness, and implement analytics to track API call reduction. Consider using cache-aside or read-through strategies for optimal performance, and ensure cache keys are structured to differentiate between user tiers. Document the configuration and provide code samples for TTL assignment and cache management. Coordinate with usage tracking and premium feature flag systems to accurately identify user tier at cache interaction.",
+        "testStrategy": "1. Verify that cache entries for free tier users expire after 7 days and for premium users after 30 days. 2. Test retrieval of cached data for both tiers and confirm correct TTL assignment. 3. Simulate cache expiry and ensure data is refreshed appropriately. 4. Measure API call frequency before and after implementation to confirm a reduction of at least 50%. 5. Validate that cache-control headers reflect the correct TTL. 6. Monitor cache hit/miss rates and eviction logs for both tiers. 7. Ensure no stale data is served beyond the configured TTL. 8. Test integration with usage tracking and premium feature flag systems to confirm correct tier identification.",
+        "status": "pending",
+        "dependencies": [
+          10,
+          20,
+          21
+        ],
+        "priority": "high",
+        "subtasks": []
+      },
+      {
+        "id": 27,
+        "title": "Reduce Comparable Properties Returned per Lookup to 3",
+        "description": "Optimize the Comparable Properties feature by reducing the number of properties returned per API lookup from 5-6 to 3, updating both backend API usage and frontend components to reflect this change.",
+        "details": "1. Update the Comparable Properties API integration to limit the number of comparable properties returned per request to 3, ensuring the API query parameters or backend logic enforce this new maximum.\n2. Refactor the ComparableProperties UI component to display only up to 3 properties per lookup, adjusting pagination or infinite scroll logic as needed.\n3. Update mock data and test fixtures to provide only 3 comparable properties per sample dataset.\n4. Review and update any filtering, sorting, or selection logic to ensure correct behavior with the reduced result set.\n5. Update documentation and code comments to reflect the new industry-standard limit.\n6. Monitor API usage metrics to confirm a reduction in calls and verify that user experience remains consistent with industry standards.\n7. Coordinate with any downstream consumers (e.g., map view, comparison view) to ensure compatibility with the new data structure and count.",
+        "testStrategy": "1. Verify that API requests for comparable properties return a maximum of 3 results per lookup in both production and mock environments.\n2. Test the ComparableProperties UI component with various datasets to ensure only 3 properties are displayed and that pagination/infinite scroll still function correctly if applicable.\n3. Confirm that filtering and sorting controls work as expected with the reduced result set.\n4. Check that mock data and test fixtures are updated to reflect the new limit.\n5. Measure API call frequency before and after the change to confirm a 40% reduction.\n6. Validate that all documentation and user-facing messages accurately describe the new behavior.",
+        "status": "pending",
+        "dependencies": [
+          11,
+          12
+        ],
+        "priority": "high",
+        "subtasks": []
+      },
+      {
+        "id": 28,
+        "title": "Update Premium Pricing to $29.99/month Across Extension",
+        "description": "Increase the premium subscription price from $9.99 to $29.99/month, updating all payment configuration, pricing displays, and upgrade prompts to reflect the new rate.",
+        "details": "1. Update the ExtPay (ExtensionPay) configuration to set the new premium tier price to $29.99/month, ensuring all payment processing and subscription logic reflect the new rate.\n2. Audit all locations in the codebase where premium pricing is displayed (UI components, onboarding flows, upgrade prompts, and settings) and update them to show $29.99/month.\n3. Revise upgrade prompts and conversion messaging to clearly communicate the new price and value proposition, referencing best practices for transparent value communication[1].\n4. Ensure that any analytics or conversion tracking logic is updated to segment users by the new price point for future A/B testing and optimization.\n5. Review and update documentation, FAQs, and store listings to reflect the new premium pricing.\n6. Coordinate with backend services (if applicable) to ensure subscription validation and billing logic are consistent with the new price.\n7. Communicate the pricing change to existing premium users, if required, with clear messaging about the transition and any grandfathering policies.",
+        "testStrategy": "1. Verify that the ExtPay configuration correctly charges $29.99/month for new premium subscriptions and that payment processing completes successfully.\n2. Check all UI components, onboarding flows, and upgrade prompts to ensure the new price is displayed consistently and accurately.\n3. Test the upgrade flow from free to premium, confirming that users are charged the correct amount and receive premium access.\n4. Review analytics and conversion tracking to ensure segmentation by the new price point is functioning.\n5. Validate that documentation and store listings show the updated price.\n6. If applicable, test the transition for existing premium users to ensure correct billing and communication.\n7. Perform regression testing to confirm that no legacy pricing references remain and that the extension functions as expected for both free and premium users.",
+        "status": "pending",
+        "dependencies": [
+          20
+        ],
+        "priority": "high",
+        "subtasks": []
+      },
+      {
+        "id": 29,
+        "title": "Integrate Google AdSense for Free Tier Users",
+        "description": "Add Google AdSense ad network integration to display ads for free tier users, while ensuring premium users have an ad-free experience. This will enable a secondary revenue stream from free users.",
+        "details": "1. Register for a Google AdSense account and complete the site verification process as required by Google.\n2. Obtain the AdSense code snippet and insert it into the HTML <head> section of all pages accessible to free tier users. For React/SPA architectures, ensure the script is loaded globally for free users only[1][2].\n3. Implement a user-tier check (free vs premium) at the layout or root component level. Only render the AdSense script and ad containers for free users; premium users must not see or load any ad-related code.\n4. Create reusable ad components (e.g., <AdBanner />, <AdSidebar />) that encapsulate AdSense ad units and can be placed in strategic locations (header, sidebar, content, etc.).\n5. Add logic to dynamically load or unload ad components based on user tier, ensuring no ad requests are made for premium users.\n6. Update the ads.txt file in the site's root directory with the required AdSense publisher entry to comply with Google policies[1].\n7. Ensure compliance with Google AdSense policies regarding ad placement, user experience, and privacy.\n8. Add configuration for ad unit IDs and enable easy management of ad placements.\n9. Document the integration steps and provide instructions for updating ad units or publisher information in the future.",
+        "testStrategy": "1. Log in as a free tier user and verify that AdSense ads are displayed in all intended locations and that ad requests are made to Google servers.\n2. Log in as a premium user and confirm that no AdSense scripts or ad containers are present in the DOM and no ad requests are made.\n3. Inspect the network activity to ensure ad scripts are conditionally loaded only for free users.\n4. Validate that the ads.txt file is present at the root and contains the correct publisher entry.\n5. Test across different browsers and devices to ensure ads render correctly and do not interfere with site functionality.\n6. Review compliance with Google AdSense policies, including ad placement and user privacy.\n7. Confirm that switching user tiers (e.g., upgrading from free to premium) immediately removes ads without requiring a page reload.",
+        "status": "pending",
+        "dependencies": [
+          19,
+          20
+        ],
+        "priority": "high",
+        "subtasks": []
+      },
+      {
+        "id": 30,
+        "title": "Implement Profitability and Conversion Analytics Dashboard",
+        "description": "Develop a comprehensive analytics dashboard to monitor conversion rate, churn rate, API usage, and profitability metrics, enabling data-driven optimization toward a 20% conversion target and $1,246/month profit goal.",
+        "details": "1. Integrate with existing analytics and error tracking infrastructure to collect real-time data on user signups, upgrades, churn events, API usage, and revenue streams (including both subscription and ad revenue).\n2. Define and implement custom events for conversion (free-to-paid upgrade), churn (subscription cancellation), and API usage milestones. Ensure these events are tracked consistently across all user flows.\n3. Calculate and display key metrics: current conversion rate (free-to-paid), churn rate, total and per-user API usage, monthly recurring revenue (MRR), ad revenue, and net profitability. Include visualizations for trends over time and breakdowns by user tier.\n4. Set up automated alerts or dashboard highlights when conversion rate drops below 20% or monthly profit falls below $1,246.\n5. Provide actionable insights by correlating feature usage, pricing changes, and user behavior with conversion and churn trends. Enable drill-down into user cohorts and feature adoption.\n6. Ensure the dashboard is accessible to product and business stakeholders, with export options for reporting.\n7. Document the data sources, metric definitions, and any assumptions used in profitability calculations.\n8. Prepare the dashboard to support future A/B testing and pricing/feature adjustments based on observed data.",
+        "testStrategy": "1. Simulate user journeys for free signups, upgrades, and cancellations; verify that conversion and churn events are accurately tracked and reflected in the dashboard.\n2. Generate test API usage and confirm correct aggregation and display of usage metrics by user and tier.\n3. Validate that revenue and profitability calculations match actual payment and ad data for a given period.\n4. Test dashboard alerts by artificially lowering conversion rate and profit below thresholds; confirm notifications or highlights trigger as expected.\n5. Review dashboard visualizations for clarity, accuracy, and actionable insights. Solicit feedback from stakeholders and iterate as needed.\n6. Confirm that all metric definitions and data sources are clearly documented and that the dashboard supports export/reporting requirements.",
+        "status": "pending",
+        "dependencies": [
+          25,
+          28,
+          29
+        ],
+        "priority": "medium",
+        "subtasks": []
       }
     ],
     "metadata": {
       "created": "2025-10-26T17:57:49.544Z",
-      "updated": "2025-10-27T20:25:00.989Z",
+      "updated": "2025-10-27T20:57:03.802Z",
       "description": "Tasks for master context"
     }
   }

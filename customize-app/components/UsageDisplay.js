@@ -30,7 +30,7 @@ export default function UsageDisplay() {
       <div className="bg-rentestBgLight rounded-lg p-3 border border-rentestBorder">
         <div className="flex justify-between items-center mb-2">
           <span className="text-rentestText text-sm font-semibold">
-            {isPremium ? '⭐ Premium' : 'Monthly Lookups'}
+            {isPremium ? '⭐ Premium - Unlimited' : 'Free Tier - 5 Lookups/Month'}
           </span>
           <span className={`text-sm font-bold ${usageColor}`}>
             {usageText}

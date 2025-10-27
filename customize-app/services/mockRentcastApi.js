@@ -239,13 +239,16 @@ export async function mockGetRentEstimate(address, city, state, zipCode) {
   
   const key = getMockPropertyKey(address, city, state, zipCode)
   const estimate = MOCK_RENT_ESTIMATES[key] || MOCK_RENT_ESTIMATES.default
+  const property = MOCK_PROPERTIES[key] || MOCK_PROPERTIES.default
   
   return {
     ...estimate,
     address: address || 'Mock Address',
     city: city || 'Mock City',
     state: state || 'XX',
-    zipCode: zipCode || '00000'
+    zipCode: zipCode || '00000',
+    latitude: property.latitude,
+    longitude: property.longitude
   }
 }
 

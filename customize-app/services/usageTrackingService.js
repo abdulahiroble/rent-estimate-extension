@@ -4,7 +4,7 @@
  */
 
 const STORAGE_KEY = 'rentest_usage'
-const FREE_TIER_QUOTA = 20 // lookups per month
+const FREE_TIER_QUOTA = 5 // lookups per month (optimized for cost and conversion)
 const QUOTA_WARNING_THRESHOLD = 0.8 // 80% of quota
 
 /**

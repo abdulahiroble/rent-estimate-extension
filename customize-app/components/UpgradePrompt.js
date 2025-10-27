@@ -39,16 +39,16 @@ export default function UpgradePrompt({ onDismiss }) {
   let title, message, icon
 
   if (stats.isExceeded) {
-    title = 'Quota Exceeded'
-    message = `You've used all ${stats.quota} lookups for this month. Upgrade to unlimited.`
+    title = 'Monthly Limit Reached'
+    message = `You've used all ${stats.quota} lookups for this month. Upgrade to unlimited searches.`
     icon = '🔒'
   } else if (stats.percentUsed >= 80) {
-    title = 'Running Low'
-    message = `Only ${stats.remaining} lookup${stats.remaining !== 1 ? 's' : ''} left this month.`
+    title = 'Running Low on Lookups'
+    message = `Only ${stats.remaining} lookup${stats.remaining !== 1 ? 's' : ''} remaining. Upgrade for unlimited.`
     icon = '⚠️'
   } else if (stats.percentUsed >= 50) {
-    title = 'Halfway There'
-    message = `You've used ${stats.used} of ${stats.quota} lookups. Upgrade for unlimited.`
+    title = 'Halfway Through Your Monthly Limit'
+    message = `You've used ${stats.used} of ${stats.quota} lookups. Upgrade to unlimited searches.`
     icon = '📊'
   }
 

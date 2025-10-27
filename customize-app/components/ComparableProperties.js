@@ -8,7 +8,7 @@ import { getComparableProperties, getCacheStats } from '@/services/rentcastApi'
 import { transformComparablePropertiesForUI } from '@/utils/responseTransformer'
 import PropertyCard from './PropertyCard'
 
-export default function ComparableProperties({ address, city, state, zipCode }) {
+export default function ComparableProperties({ address, city, state, zipCode, onPropertiesLoad, onLoadingChange }) {
   // State management
   const [properties, setProperties] = useState([])
   const [filteredProperties, setFilteredProperties] = useState([])
@@ -37,6 +37,7 @@ export default function ComparableProperties({ address, city, state, zipCode }) 
     const fetchComparables = async () => {
       try {
         setLoading(true)
+        onLoadingChange?.(true)
         setError(null)
 
         const result = await getComparableProperties(
@@ -60,18 +61,23 @@ export default function ComparableProperties({ address, city, state, zipCode }) 
         setTotalCount(uiData.totalCount)
         setTotalPages(uiData.totalPages)
         setFilteredProperties(uiData.properties)
+        
+        // Notify parent component of properties
+        onPropertiesLoad?.(uiData.properties)
       } catch (err) {
         console.error('Error fetching comparable properties:', err)
         setError(err.userMessage || 'Failed to load comparable properties')
         setProperties([])
         setFilteredProperties([])
+        onPropertiesLoad?.([])
       } finally {
         setLoading(false)
+        onLoadingChange?.(false)
       }
     }
 
     fetchComparables()
-  }, [address, city, state, zipCode, propertyType, sortBy, sortOrder, currentPage, pageSize])
+  }, [address, city, state, zipCode, propertyType, sortBy, sortOrder, currentPage, pageSize, onPropertiesLoad, onLoadingChange])
 
   // Handle filter change
   const handleFilterChange = (e) => {
