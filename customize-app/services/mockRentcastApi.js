@@ -270,6 +270,7 @@ export async function mockGetPropertyData(address, city, state, zipCode) {
 
 /**
  * Mock getComparableProperties
+ * Returns realistic comparable properties data for testing filtering, sorting, and pagination
  */
 export async function mockGetComparableProperties(address, city, state, zipCode, radius = 1) {
   // Simulate API delay
@@ -278,15 +279,143 @@ export async function mockGetComparableProperties(address, city, state, zipCode,
   const key = getMockPropertyKey(address, city, state, zipCode)
   const estimate = MOCK_RENT_ESTIMATES[key] || MOCK_RENT_ESTIMATES.default
   
+  // Generate extended mock data for testing pagination and filtering
+  const baseComparables = estimate.comparables || []
+  
+  // Generate additional properties for pagination testing
+  const extendedProperties = [
+    ...baseComparables.map(comp => ({
+      address: comp.addressLine1 || comp.formattedAddress,
+      city: comp.city || city || 'Mock City',
+      state: comp.state || state || 'XX',
+      zipCode: comp.zipCode || zipCode || '00000',
+      rent: comp.price || 2500,
+      bedrooms: comp.bedrooms || 3,
+      bathrooms: comp.bathrooms || 2,
+      squareFootage: comp.squareFootage || 1800,
+      propertyType: comp.propertyType || 'Single Family',
+      daysOnMarket: comp.daysOnMarket || 45,
+      listingUrl: `https://example.com/listing/${comp.id}`,
+      latitude: 37.7749 + (Math.random() - 0.5) * 0.05,
+      longitude: -122.4194 + (Math.random() - 0.5) * 0.05,
+      distance: comp.distance || Math.random() * 2
+    })),
+    // Add more mock properties for pagination testing
+    {
+      address: '458 Oak Avenue',
+      city: city || 'Mock City',
+      state: state || 'XX',
+      zipCode: zipCode || '00000',
+      rent: 2600,
+      bedrooms: 3,
+      bathrooms: 2,
+      squareFootage: 1850,
+      propertyType: 'Single Family',
+      daysOnMarket: 52,
+      listingUrl: 'https://example.com/listing/comp-extra-1',
+      latitude: 37.7750,
+      longitude: -122.4193,
+      distance: 0.15
+    },
+    {
+      address: '459 Oak Avenue',
+      city: city || 'Mock City',
+      state: state || 'XX',
+      zipCode: zipCode || '00000',
+      rent: 2450,
+      bedrooms: 2,
+      bathrooms: 2,
+      squareFootage: 1600,
+      propertyType: 'Condo',
+      daysOnMarket: 28,
+      listingUrl: 'https://example.com/listing/comp-extra-2',
+      latitude: 37.7751,
+      longitude: -122.4192,
+      distance: 0.22
+    },
+    {
+      address: '460 Oak Avenue',
+      city: city || 'Mock City',
+      state: state || 'XX',
+      zipCode: zipCode || '00000',
+      rent: 2750,
+      bedrooms: 4,
+      bathrooms: 3,
+      squareFootage: 2100,
+      propertyType: 'Single Family',
+      daysOnMarket: 15,
+      listingUrl: 'https://example.com/listing/comp-extra-3',
+      latitude: 37.7752,
+      longitude: -122.4191,
+      distance: 0.35
+    },
+    {
+      address: '461 Oak Avenue',
+      city: city || 'Mock City',
+      state: state || 'XX',
+      zipCode: zipCode || '00000',
+      rent: 2300,
+      bedrooms: 2,
+      bathrooms: 1,
+      squareFootage: 1400,
+      propertyType: 'Apartment',
+      daysOnMarket: 67,
+      listingUrl: 'https://example.com/listing/comp-extra-4',
+      latitude: 37.7753,
+      longitude: -122.4190,
+      distance: 0.45
+    },
+    {
+      address: '462 Oak Avenue',
+      city: city || 'Mock City',
+      state: state || 'XX',
+      zipCode: zipCode || '00000',
+      rent: 2900,
+      bedrooms: 3,
+      bathrooms: 2,
+      squareFootage: 1950,
+      propertyType: 'Single Family',
+      daysOnMarket: 8,
+      listingUrl: 'https://example.com/listing/comp-extra-5',
+      latitude: 37.7754,
+      longitude: -122.4189,
+      distance: 0.55
+    }
+  ]
+  
+  // Calculate statistics
+  const rentValues = extendedProperties.map(p => p.rent).filter(r => r > 0)
+  const averageRent = rentValues.length > 0
+    ? Math.round(rentValues.reduce((a, b) => a + b, 0) / rentValues.length)
+    : 0
+  const medianRent = rentValues.length > 0
+    ? Math.round(calculateMockMedian(rentValues))
+    : 0
+  
   return {
-    comparables: estimate.comparables || [],
-    count: estimate.comparables?.length || 0,
-    radius: radius,
+    properties: extendedProperties,
+    count: extendedProperties.length,
+    searchRadius: radius,
+    averageRent,
+    medianRent,
     address: address || 'Mock Address',
     city: city || 'Mock City',
     state: state || 'XX',
     zipCode: zipCode || '00000'
   }
+}
+
+/**
+ * Calculate median for mock data
+ * @private
+ */
+function calculateMockMedian(values) {
+  if (values.length === 0) return 0
+  const sorted = [...values].sort((a, b) => a - b)
+  const mid = Math.floor(sorted.length / 2)
+  return sorted.length % 2 !== 0
+    ? sorted[mid]
+    : (sorted[mid - 1] + sorted[mid]) / 2
 }
 
 /**

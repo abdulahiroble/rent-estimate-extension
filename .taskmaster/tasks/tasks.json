@@ -217,8 +217,96 @@
           3,
           5
         ],
-        "status": "pending",
-        "subtasks": []
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Add Comparable Properties Endpoint to API Service",
+            "description": "Integrate the comparable properties endpoint into the backend API service to enable retrieval of comparable rental properties.",
+            "dependencies": [],
+            "details": "Review the Comparable Properties API documentation. Implement a new service method that calls the external endpoint, handles authentication, and parses the raw response. Ensure the method is reusable and follows existing API service patterns.",
+            "status": "done",
+            "testStrategy": "Mock the external API and verify the service method correctly retrieves and parses data."
+          },
+          {
+            "id": 2,
+            "title": "Create TypeScript Interfaces for Comparable Properties Data",
+            "description": "Define TypeScript interfaces to represent the structure of comparable properties data returned by the API.",
+            "dependencies": [
+              "11.1"
+            ],
+            "details": "Analyze the API response schema and create strongly-typed interfaces for property, address, pricing, and any nested objects. Place interfaces in a shared types directory for reuse.",
+            "status": "done",
+            "testStrategy": "Write unit tests to validate type safety and ensure interfaces match the API schema."
+          },
+          {
+            "id": 3,
+            "title": "Implement Filtering by Property Type",
+            "description": "Add filtering logic to allow retrieval of comparable properties by specific property types (e.g., apartment, single-family, condo).",
+            "dependencies": [
+              "11.1",
+              "11.2"
+            ],
+            "details": "Extend the API service method to accept property type as a parameter. Update the request payload or query string to include the filter. Ensure the filter is applied before returning results.",
+            "status": "done",
+            "testStrategy": "Test with various property types and verify only matching properties are returned."
+          },
+          {
+            "id": 4,
+            "title": "Add Sorting Options (Price, Distance, etc.)",
+            "description": "Enable sorting of comparable properties by criteria such as price and distance from the subject property.",
+            "dependencies": [
+              "11.3"
+            ],
+            "details": "Implement sorting logic in the API service or client layer. Accept sorting parameters and apply them to the result set, either via API query parameters or in-memory sorting if not supported by the API.",
+            "status": "done",
+            "testStrategy": "Verify sorting works for each supported criterion and handles edge cases (e.g., missing values)."
+          },
+          {
+            "id": 5,
+            "title": "Create Pagination for Large Result Sets",
+            "description": "Implement pagination to efficiently handle large sets of comparable properties and improve performance.",
+            "dependencies": [
+              "11.4"
+            ],
+            "details": "Add pagination parameters (page, pageSize) to the API request. Update the service to handle paginated responses and expose pagination metadata (total count, current page).",
+            "status": "done",
+            "testStrategy": "Test with large datasets to ensure correct page boundaries and metadata."
+          },
+          {
+            "id": 6,
+            "title": "Implement Caching for Comparable Properties",
+            "description": "Add caching to reduce redundant API calls and improve response times for frequently requested comparable properties.",
+            "dependencies": [
+              "11.5"
+            ],
+            "details": "Use an in-memory or distributed cache (e.g., Redis) to store results keyed by query parameters. Set appropriate cache expiry based on data volatility. Invalidate cache when relevant data changes.",
+            "status": "done",
+            "testStrategy": "Test cache hits and misses, and verify cache invalidation logic."
+          },
+          {
+            "id": 7,
+            "title": "Add Error Handling for No Comparables Available",
+            "description": "Implement robust error handling for scenarios where no comparable properties are found or the API returns errors.",
+            "dependencies": [
+              "11.6"
+            ],
+            "details": "Detect empty or error responses from the API. Return user-friendly error messages and appropriate status codes. Log errors for monitoring and debugging.",
+            "status": "done",
+            "testStrategy": "Simulate API errors and empty results to verify error handling and messaging."
+          },
+          {
+            "id": 8,
+            "title": "Create Data Transformation for UI Consumption",
+            "description": "Transform raw API data into a format optimized for UI components, ensuring consistency and usability.",
+            "dependencies": [
+              "11.7"
+            ],
+            "details": "Map API response fields to UI model fields, format values (e.g., currency, distance), and aggregate or flatten nested data as needed. Document the transformation logic for maintainability.",
+            "status": "done",
+            "testStrategy": "Test transformed data with UI components to ensure correct display and usability."
+          }
+        ]
       },
       {
         "id": 12,
@@ -230,8 +318,102 @@
         "dependencies": [
           11
         ],
-        "status": "pending",
-        "subtasks": []
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Set Up Comparable Properties List Component",
+            "description": "Create the main React component structure to display a list of comparable rental properties.",
+            "dependencies": [],
+            "details": "Define a functional React component (e.g., ComparablePropertiesList) that receives an array of property data via props. Set up the initial JSX structure for rendering the list and handling empty states.",
+            "status": "done",
+            "testStrategy": "Render the component with mock data and verify that the list structure appears as expected."
+          },
+          {
+            "id": 2,
+            "title": "Implement Property Card Subcomponent",
+            "description": "Develop a reusable property card component to display key details for each comparable property.",
+            "dependencies": [
+              "12.1"
+            ],
+            "details": "Create a PropertyCard component that accepts property details as props (address, rent, bedrooms, bathrooms, etc.). Ensure the card layout is clear and concise, and integrate it into the main list component.",
+            "status": "done",
+            "testStrategy": "Test rendering individual cards with various property data and verify correct display of all key details."
+          },
+          {
+            "id": 3,
+            "title": "Add Filtering UI for Property Types",
+            "description": "Implement a filtering interface to allow users to filter comparable properties by type (e.g., apartment, house).",
+            "dependencies": [
+              "12.1"
+            ],
+            "details": "Add a dropdown or checkbox group for property types above the list. Update the component state to filter the displayed properties based on user selection.",
+            "status": "done",
+            "testStrategy": "Verify that selecting different property types updates the displayed list accordingly."
+          },
+          {
+            "id": 4,
+            "title": "Create Sorting Controls",
+            "description": "Add UI controls to sort the list of comparable properties by criteria such as rent, distance, or number of bedrooms.",
+            "dependencies": [
+              "12.1"
+            ],
+            "details": "Implement sorting dropdowns or buttons. Update the component state to sort the property list based on the selected criterion and order.",
+            "status": "done",
+            "testStrategy": "Test sorting functionality with various criteria and ensure the list updates correctly."
+          },
+          {
+            "id": 5,
+            "title": "Implement Pagination or Infinite Scroll",
+            "description": "Enable pagination or infinite scrolling to handle lists with more than 5 properties, ensuring smooth navigation.",
+            "dependencies": [
+              "12.1",
+              "12.2"
+            ],
+            "details": "Choose either pagination controls or infinite scroll. For pagination, add page navigation buttons and update the displayed subset of properties. For infinite scroll, load more properties as the user scrolls.",
+            "status": "done",
+            "testStrategy": "Test navigation through multiple pages or scrolling to load more properties, verifying correct data display."
+          },
+          {
+            "id": 6,
+            "title": "Add Distance Indicator to Property Cards",
+            "description": "Display the distance from the target property on each property card.",
+            "dependencies": [
+              "12.2"
+            ],
+            "details": "Calculate or receive the distance value for each property and display it prominently on the PropertyCard component.",
+            "status": "done",
+            "testStrategy": "Verify that the correct distance is shown for each property and updates appropriately with data changes."
+          },
+          {
+            "id": 7,
+            "title": "Style Components with Tailwind CSS",
+            "description": "Apply Tailwind CSS classes to all UI elements for consistent, responsive, and visually appealing design.",
+            "dependencies": [
+              "12.1",
+              "12.2",
+              "12.3",
+              "12.4",
+              "12.5",
+              "12.6"
+            ],
+            "details": "Refactor JSX to use Tailwind CSS utility classes for layout, spacing, typography, and responsiveness. Ensure all components look cohesive and adapt to different screen sizes.",
+            "status": "done",
+            "testStrategy": "Check component appearance across devices and screen sizes. Verify that styling matches design requirements."
+          },
+          {
+            "id": 8,
+            "title": "Create Empty State for No Comparable Properties",
+            "description": "Implement a user-friendly empty state UI for scenarios where no comparable properties are available.",
+            "dependencies": [
+              "12.1",
+              "12.7"
+            ],
+            "details": "Add conditional rendering logic to display an informative message and icon when the property list is empty. Ensure the empty state is styled with Tailwind CSS.",
+            "status": "done",
+            "testStrategy": "Test the component with an empty dataset and verify that the empty state appears as intended."
+          }
+        ]
       },
       {
         "id": 13,
@@ -421,7 +603,7 @@
     ],
     "metadata": {
       "created": "2025-10-26T17:57:49.544Z",
-      "updated": "2025-10-27T14:31:46.322Z",
+      "updated": "2025-10-27T20:25:00.989Z",
       "description": "Tasks for master context"
     }
   }

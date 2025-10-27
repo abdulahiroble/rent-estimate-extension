@@ -12,6 +12,7 @@ import RentEstimateResult from './RentEstimateResult'
 import PropertyInformation from './PropertyInformation'
 import UsageDisplay from './UsageDisplay'
 import MarketInsights from './MarketInsights'
+import ComparableProperties from './ComparableProperties'
 import UpgradePrompt from './UpgradePrompt'
 
 export default function RentEstimateContainer() {
@@ -113,6 +114,16 @@ export default function RentEstimateContainer() {
               zipCode={data.zipCode}
               city={data.city}
               state={data.state}
+            />
+          )}
+
+          {/* Comparable Properties - show when we have address data */}
+          {data && (
+            <ComparableProperties
+              address={data.address}
+              city={data.city}
+              state={data.state}
+              zipCode={data.zipCode}
             />
           )}
         </>

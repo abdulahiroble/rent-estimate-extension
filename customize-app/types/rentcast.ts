@@ -41,6 +41,9 @@ export interface ComparableProperty {
   propertyType?: string
   daysOnMarket?: number
   listingUrl?: string
+  latitude?: number
+  longitude?: number
+  distance?: number
 }
 
 export interface ComparablePropertiesRequest {
@@ -51,12 +54,36 @@ export interface ComparablePropertiesRequest {
   radius?: number
 }
 
+export interface ComparablePropertiesOptions {
+  radius?: number
+  propertyType?: string | null
+  sortBy?: 'price' | 'distance' | 'daysOnMarket' | 'bedrooms' | 'bathrooms' | 'squareFeet'
+  sortOrder?: 'asc' | 'desc'
+  page?: number
+  pageSize?: number
+}
+
+export interface AppliedFilters {
+  propertyType?: string | null
+  sortBy?: string
+  sortOrder?: string
+}
+
 export interface ComparablePropertiesResponse {
   properties: ComparableProperty[]
   count: number
+  totalCount: number
+  page: number
+  pageSize: number
+  totalPages: number
   searchRadius: number
   averageRent: number
   medianRent: number
+  rentRange: {
+    min: number
+    max: number
+  }
+  appliedFilters?: AppliedFilters
 }
 
 // ============ Market Statistics Types ============

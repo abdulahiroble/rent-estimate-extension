@@ -62,6 +62,59 @@ export function transformComparableProperties(data) {
 }
 
 /**
+ * Transform comparable properties for UI display with formatting
+ */
+export function transformComparablePropertiesForUI(data) {
+  if (!data || !data.properties) return null
+
+  return {
+    properties: (data.properties || []).map(prop => ({
+      id: `${prop.address}-${prop.zipCode}`,
+      address: prop.address || '',
+      city: prop.city || '',
+      state: prop.state || '',
+      zipCode: prop.zipCode || '',
+      fullAddress: `${prop.address}, ${prop.city}, ${prop.state} ${prop.zipCode}`,
+      rent: Math.round(prop.rent || 0),
+      rentFormatted: formatCurrency(prop.rent || 0),
+      bedrooms: prop.bedrooms || null,
+      bathrooms: prop.bathrooms || null,
+      squareFeet: prop.squareFeet || null,
+      squareFeetFormatted: prop.squareFeet ? formatNumber(prop.squareFeet) : 'N/A',
+      pricePerSqFt: prop.squareFeet ? Math.round((prop.rent || 0) / prop.squareFeet) : null,
+      propertyType: prop.propertyType || 'Unknown',
+      daysOnMarket: prop.daysOnMarket || null,
+      daysOnMarketFormatted: prop.daysOnMarket ? `${prop.daysOnMarket} days` : 'N/A',
+      listingUrl: prop.listingUrl || null,
+      latitude: prop.latitude || null,
+      longitude: prop.longitude || null,
+      distance: prop.distance || null,
+      distanceFormatted: prop.distance ? `${prop.distance.toFixed(2)} mi` : 'N/A'
+    })),
+    count: data.count || 0,
+    totalCount: data.totalCount || 0,
+    page: data.page || 1,
+    pageSize: data.pageSize || 20,
+    totalPages: data.totalPages || 0,
+    searchRadius: data.searchRadius || 1,
+    averageRent: Math.round(data.averageRent || 0),
+    averageRentFormatted: formatCurrency(data.averageRent || 0),
+    medianRent: Math.round(data.medianRent || 0),
+    medianRentFormatted: formatCurrency(data.medianRent || 0),
+    rentRange: {
+      min: Math.round(data.rentRange?.min || 0),
+      max: Math.round(data.rentRange?.max || 0),
+      minFormatted: formatCurrency(data.rentRange?.min || 0),
+      maxFormatted: formatCurrency(data.rentRange?.max || 0)
+    },
+    appliedFilters: data.appliedFilters || {},
+    hasResults: (data.properties || []).length > 0,
+    hasPreviousPage: (data.page || 1) > 1,
+    hasNextPage: (data.page || 1) < (data.totalPages || 0)
+  }
+}
+
+/**
  * Transform market statistics response
  */
 export function transformMarketStatistics(data) {
