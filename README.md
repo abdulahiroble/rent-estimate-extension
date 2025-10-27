@@ -1,35 +1,98 @@
-<img width="80px" alt="Minimal Theme for Twitter App Icon" src="./assets/MinimalTwitterIcon.png" />
+# RentEst - Instant Rent Estimates
 
-## Install Extension
+A browser extension that provides instant rental price estimates for any property in the United States.
 
-- **Add to Chrome**: **[Available in the Chrome Web Store](https://chrome.google.com/webstore/detail/pobhoodpcipjmedfenaigbeloiidbflp)**
-- **Add to Firefox**: **[Available as a Firefox Browser Add-on](https://addons.mozilla.org/en-US/firefox/addon/minimaltwitter/)**
-- **Add to Microsoft Edge**: **[Available as a Microsoft Edge Add-on](https://microsoftedge.microsoft.com/addons/detail/mghjldihobnccoppgcgfelpdpffmebjn)**
+## Overview
 
-![Screenshots](./assets/screenshots.png)
+RentEst is a powerful tool for real estate investors, landlords, and property managers who need quick, accurate rental pricing data. Get rent estimates, comparable properties, and market insights directly in your browser without visiting multiple websites.
 
-Alternatively, you can use the [base styles](extension/content/main.css) as userstyles (e.g. with [Firefox's built-in Style Editor](https://developer.mozilla.org/en-US/docs/Tools/Style_Editor) or using extensions like [Stylish for Chrome](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe) and [Cascadea for Safari](https://apps.apple.com/app/cascadea/id1432182561)).
+**Powered by RentCast's 140M+ property database**
 
-To contribute and/or see development instructions, go to [CONTRIBUTING](./.github/CONTRIBUTING.md).
+## Features
 
-## Customize
+- 🏠 **Instant Rent Estimates** - Get accurate rent estimates for any property
+- 📍 **Location-Based Search** - Search by address or use current location
+- 🏘️ **Comparable Properties** - View nearby rental comps with details
+- 📊 **Market Insights** - Local market statistics and historical trends
+- 💾 **Save Favorites** - Keep track of properties you're interested in
+- 📈 **Premium Features** - Unlimited lookups, detailed comps, PDF reports
 
-Customizations, preferences, options! Access them by clicking the extension's icon as a popup or in full screen in Options (Chrome & Edge) or Preferences (Firefox).
+## Installation
 
-— _You can_ —
+Coming soon to:
+- Chrome Web Store
+- Firefox Add-ons
+- Microsoft Edge Add-ons
 
-- Control Feed / Timeline Width
-- Control Navigation UI: Buttons, Centering, Labels
-- Activate **Zen Mode**
-- ...and more!
+## Development
 
-## Sponsors
+### Prerequisites
+- Node.js 16+
+- npm or yarn
 
-Thanks to the below sponsors for supporting! If you'd like to be added as a sponsor, please reach out [via email](mailto:wang@hey.com?subject=Sponsorship).
+### Setup
 
-<a href="https://typefully.com/?via=thomas">
-	<img width="50px" alt="Typefully Icon" src="./assets/typefully.png" />
-</a>
-<a href="https://mailbrew.com/?aff=ThomasWang">
-	<img width="50px" alt="Mailbrew Icon" src="./assets/mailbrew.png" />
-</a>
+```bash
+cd customize-app
+npm install
+npm run dev
+```
+
+### Build for Extension
+
+```bash
+npm run build
+```
+
+This will compile the Next.js app and copy the output to the `extension/` directory.
+
+### Project Structure
+
+```
+rent-est-extension/
+├── customize-app/          # Next.js frontend application
+│   ├── components/         # React components
+│   ├── pages/             # Next.js pages
+│   ├── styles/            # CSS and Tailwind config
+│   └── utilities/         # Chrome and storage utilities
+├── extension/             # Chrome extension files
+│   ├── manifest.json      # Extension manifest
+│   ├── background.js      # Service worker
+│   └── customize.html     # Built extension UI
+└── .taskmaster/           # Project task management
+```
+
+## Technology Stack
+
+- **Frontend**: Next.js 13, React 18, TypeScript
+- **Styling**: Tailwind CSS 3
+- **Extension**: Chrome Extension Manifest V3
+- **API**: RentCast Property Data API
+- **Payment**: ExtPay
+- **Visualization**: Leaflet, Chart.js
+
+## API Integration
+
+RentEst uses the RentCast API to provide:
+- Property rent estimates (AVM)
+- Comparable rental properties
+- Market statistics and trends
+- Historical rent data
+- 140M+ property records nationwide
+
+## Pricing
+
+- **Free Tier**: 10-20 lookups/month
+- **Pro Tier**: $9.99/month - Unlimited lookups + premium features
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+MIT License - see LICENSE file for details
+
+## Support
+
+For issues, feature requests, or questions, please open an issue on GitHub.

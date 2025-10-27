@@ -1,0 +1,428 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Clean Up Codebase and Remove Twitter Template Code",
+        "description": "Remove all Twitter extension template code and clean up unused components and dependencies to prepare the codebase for RentEst implementation.",
+        "status": "done",
+        "dependencies": [],
+        "priority": "high",
+        "details": "1. Identify and remove all Twitter-specific components, utilities, and assets\n   - Remove components: Posts.js, Profile.js, Carousel.js, Ghost.js, Listings.js, ListingsDetails.js, StarIconComponent.js, Navigation.js, FeedSlider.js, ExtrasCheckboxes.js, ExtrasSwitches.js, Separator.js, Extras.js, ExtrasSection.js, FeedSection.js, NavigationSection.js, AffiliateSection.js\n   - Keep and repurpose: FrontdoorPage.js, Search.js, Header.js, Main.js, Container.js, Footer.js, Layout components, Chart components\n   - Remove Twitter-specific utilities in chrometab.js and chromeStorage.js\n2. Delete unused dependencies from package.json\n   - Remove: @chakra-ui/*, @emotion/*, @radix-ui/*, @stitches/react\n3. Run npm prune to clean up node_modules\n4. Remove Twitter-specific styles and theme elements\n   - Update tailwind.config.js - replace Twitter colors (twitterBlue, twitterBgOne, etc.) with RentEst brand colors\n   - Update globals.css - replace Twitter CSS variables and color scheme\n5. Clean up any Twitter-related configuration files\n   - Update manifest.json - change extension name/description\n6. Document removed components for reference\n   - Update README.md with changes made\n7. Ensure the application still builds after cleanup",
+        "testStrategy": "Verify the application builds successfully without errors. Check that no Twitter-specific code remains in the codebase. Run linting tools to ensure code quality.",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Remove Twitter-specific components",
+            "description": "Delete the identified Twitter-specific components while preserving components to be repurposed for RentEst",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Remove Twitter-specific utilities",
+            "description": "Remove Twitter-specific utilities in chrometab.js and chromeStorage.js",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Update Tailwind configuration",
+            "description": "Update tailwind.config.js to replace Twitter colors with RentEst brand colors",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "Update CSS variables",
+            "description": "Update globals.css to replace Twitter CSS variables and color scheme",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "Remove unused dependencies",
+            "description": "Update package.json to remove @chakra-ui/*, @emotion/*, @radix-ui/*, @stitches/react and other unused dependencies",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 6,
+            "title": "Update extension configuration",
+            "description": "Update manifest.json to change extension name and description for RentEst",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 7,
+            "title": "Update documentation",
+            "description": "Update README.md to document removed components and changes made to the codebase",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 8,
+            "title": "Verify build success",
+            "description": "Ensure the application builds successfully after all cleanup tasks are complete",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Update Extension Branding and Manifest",
+        "description": "Update all branding elements from 'Minimal Twitter' to 'RentEst' and update the manifest.json with correct extension details.",
+        "details": "1. Update manifest.json with new name, description, and version\n2. Replace all instances of 'Minimal Twitter' with 'RentEst' in code and comments\n3. Update extension icons and logos with RentEst branding\n4. Update extension permissions to include geolocation and necessary API access\n5. Set appropriate extension popup dimensions\n6. Update README.md with RentEst information and setup instructions\n7. Create new screenshots for store listings",
+        "testStrategy": "Verify manifest.json is valid using Chrome extension validator. Check that all branding elements are consistently updated. Ensure the extension loads correctly with new branding.",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Set Up RentCast API Integration Framework",
+        "description": "Create the API service layer for RentCast endpoints and implement secure API key management.",
+        "details": "1. Sign up for RentCast API (free tier - 50 calls/month)\n2. Create an API service class with methods for each endpoint\n3. Implement secure API key storage using environment variables\n4. Set up API request/response interfaces using TypeScript\n5. Implement request throttling to respect API rate limits\n6. Create error handling utilities for API responses\n7. Set up a caching mechanism to reduce API calls\n8. Document the API integration for future reference",
+        "testStrategy": "Create unit tests for API service methods. Test API key security. Verify rate limiting functionality works as expected. Test error handling with mocked failed responses.",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Implement Property Search by Address API Integration",
+        "description": "Integrate the RentCast API endpoint for property search by address functionality.",
+        "details": "1. Implement the property search API method in the service layer\n2. Create TypeScript interfaces for property search request/response\n3. Add address validation and formatting\n4. Implement error handling for address not found\n5. Add retry logic for failed requests\n6. Create a response transformer to standardize API data\n7. Implement caching for recent address searches\n8. Add logging for debugging purposes",
+        "testStrategy": "Test with various address formats. Verify error handling for invalid addresses. Check cache functionality works correctly. Create unit tests with mock API responses.",
+        "priority": "high",
+        "dependencies": [
+          3
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "Implement Rent Estimate API Integration",
+        "description": "Integrate the RentCast API endpoint for retrieving rent estimates for properties.",
+        "details": "1. Implement the rent estimate API method in the service layer\n2. Create TypeScript interfaces for rent estimate request/response\n3. Add support for different property types (single-family, multi-family, etc.)\n4. Implement error handling for estimate not available\n5. Create a response transformer to extract relevant estimate data\n6. Add caching for rent estimates with 24-hour expiry\n7. Implement logging for estimate accuracy tracking",
+        "testStrategy": "Test with various property types. Verify error handling for unavailable estimates. Check cache functionality with expiry. Create unit tests with mock API responses.",
+        "priority": "high",
+        "dependencies": [
+          3
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Create Address Search UI Component",
+        "description": "Develop the address search input component with autocomplete functionality.",
+        "details": "1. Create a React component for address search using TypeScript\n2. Implement address input field with validation\n3. Add debounce functionality to prevent excessive API calls\n4. Implement address autocomplete dropdown\n5. Style the component using Tailwind CSS\n6. Add loading states during API calls\n7. Implement keyboard navigation for autocomplete results\n8. Add clear button and search history dropdown",
+        "testStrategy": "Test component rendering and user interactions. Verify autocomplete functionality works correctly. Test keyboard navigation. Ensure component is responsive and accessible.",
+        "priority": "high",
+        "dependencies": [
+          2,
+          4
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Implement Current Location Detection",
+        "description": "Add functionality to detect the user's current location and find nearby properties.",
+        "details": "1. Create a location service using the browser's Geolocation API\n2. Implement permission handling for location access\n3. Add reverse geocoding to convert coordinates to address\n4. Create a UI button component for location detection\n5. Implement loading state during location detection\n6. Add error handling for location permission denied\n7. Integrate with property search functionality\n8. Cache the last known location",
+        "testStrategy": "Test location detection in different browsers. Verify error handling for denied permissions. Test reverse geocoding accuracy. Ensure the UI updates appropriately during the process.",
+        "priority": "medium",
+        "dependencies": [
+          4,
+          6
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Create Rent Estimate Display Component",
+        "description": "Develop the UI component to display rent estimates including average, low, and high values.",
+        "details": "1. Create a React component for displaying rent estimates\n2. Design the layout with Tailwind CSS\n3. Implement responsive design for different screen sizes\n4. Add animations for value changes\n5. Create skeleton screens for loading states\n6. Implement error states with retry options\n7. Add tooltips for explaining estimate ranges\n8. Include confidence score visualization",
+        "testStrategy": "Test component rendering with different data sets. Verify responsive behavior. Test loading and error states. Ensure accessibility compliance.",
+        "priority": "high",
+        "dependencies": [
+          5
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Implement Basic Property Information Display",
+        "description": "Create a component to display basic property information retrieved from the API.",
+        "details": "1. Create a React component for property details\n2. Design the layout with Tailwind CSS\n3. Display property type, bedrooms, bathrooms, square footage\n4. Add property image if available\n5. Implement address formatting\n6. Create loading states and error handling\n7. Add property features list\n8. Implement responsive design for different screen sizes",
+        "testStrategy": "Test component with various property types. Verify all property details are displayed correctly. Test loading and error states. Ensure responsive behavior across screen sizes.",
+        "priority": "medium",
+        "dependencies": [
+          4,
+          5
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Implement Search Results Caching",
+        "description": "Create a caching mechanism to store recent search results and reduce API calls.",
+        "details": "1. Implement a cache service using browser storage\n2. Create cache expiry logic (24 hours)\n3. Add cache hit/miss tracking\n4. Implement cache size limits to prevent excessive storage use\n5. Create cache invalidation for outdated data\n6. Add cache compression for larger datasets\n7. Implement cache persistence across sessions\n8. Create cache management UI for users to clear cache",
+        "testStrategy": "Test cache storage and retrieval. Verify expiry logic works correctly. Test cache size limits and compression. Ensure cache persists across browser sessions.",
+        "priority": "medium",
+        "dependencies": [
+          4,
+          5
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 11,
+        "title": "Integrate Comparable Properties API",
+        "description": "Implement the API integration for retrieving comparable rental properties in the area.",
+        "details": "1. Add comparable properties endpoint to API service\n2. Create TypeScript interfaces for comparable properties data\n3. Implement filtering by property type\n4. Add sorting options (by price, distance, etc.)\n5. Create pagination for large result sets\n6. Implement caching for comparable properties\n7. Add error handling for no comps available\n8. Create data transformation for UI consumption",
+        "testStrategy": "Test API integration with various property types. Verify filtering and sorting functionality. Test pagination with large datasets. Ensure error handling works correctly.",
+        "priority": "medium",
+        "dependencies": [
+          3,
+          5
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 12,
+        "title": "Create Comparable Properties UI Component",
+        "description": "Develop the UI component to display 5-20 nearby rental comps with details.",
+        "details": "1. Create a React component for comparable properties list\n2. Implement property cards with key details\n3. Add filtering UI for property types\n4. Create sorting controls\n5. Implement pagination or infinite scroll\n6. Add distance indicator from target property\n7. Style with Tailwind CSS\n8. Create empty state for no comps available",
+        "testStrategy": "Test component with various datasets. Verify filtering and sorting works correctly. Test pagination/infinite scroll. Ensure responsive behavior across screen sizes.",
+        "priority": "medium",
+        "dependencies": [
+          11
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 13,
+        "title": "Implement Map View for Comparable Properties",
+        "description": "Create a map visualization of comparable properties using Leaflet.",
+        "details": "1. Set up Leaflet integration in the project\n2. Create a map component with TypeScript\n3. Implement property markers with custom styling\n4. Add popup information for each property\n5. Implement clustering for many properties\n6. Add controls for map zoom and centering\n7. Create responsive design for different screen sizes\n8. Implement performance optimizations for many markers",
+        "testStrategy": "Test map rendering with different datasets. Verify marker placement and popups. Test clustering functionality. Ensure responsive behavior and performance with many markers.",
+        "priority": "medium",
+        "dependencies": [
+          11,
+          12
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 14,
+        "title": "Integrate Market Insights API",
+        "description": "Implement the API integration for retrieving local market statistics and trends.",
+        "details": "1. Add market insights endpoint to API service\n2. Create TypeScript interfaces for market data\n3. Implement zip code based queries\n4. Add historical data retrieval (3, 6, 12 months)\n5. Create data transformation for UI consumption\n6. Implement caching for market data\n7. Add error handling for unavailable market data\n8. Create logging for market data accuracy",
+        "testStrategy": "Test API integration with various zip codes. Verify historical data retrieval. Test caching functionality. Ensure error handling works correctly for edge cases.",
+        "priority": "medium",
+        "dependencies": [
+          3
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 15,
+        "title": "Create Market Insights UI Components",
+        "description": "Develop UI components to display local market statistics and historical rent trends.",
+        "details": "1. Set up Chart.js integration in the project\n2. Create components for key market statistics\n3. Implement historical trend charts\n4. Add time period selectors (3, 6, 12 months)\n5. Create market performance indicators\n6. Implement responsive design for charts\n7. Add tooltips for data explanation\n8. Create print-friendly view for reports",
+        "testStrategy": "Test chart rendering with various datasets. Verify time period selection works correctly. Test responsive behavior of charts. Ensure accessibility of chart data.",
+        "priority": "medium",
+        "dependencies": [
+          14
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 16,
+        "title": "Implement Favorites Functionality",
+        "description": "Add the ability for users to save favorite properties for later reference.",
+        "details": "1. Create a favorites service using browser storage\n2. Implement add/remove favorite functionality\n3. Create a favorites list UI component\n4. Add sorting and filtering for favorites\n5. Implement data persistence across sessions\n6. Create export functionality for favorites\n7. Add notifications for favorites changes\n8. Implement sync with user account (if applicable)",
+        "testStrategy": "Test adding and removing favorites. Verify persistence across sessions. Test sorting and filtering functionality. Ensure export functionality works correctly.",
+        "priority": "low",
+        "dependencies": [
+          9
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 17,
+        "title": "Create Recent Searches History",
+        "description": "Implement functionality to track and display recent property searches.",
+        "details": "1. Create a search history service using browser storage\n2. Implement add/clear history functionality\n3. Create a search history UI component\n4. Add quick re-search from history\n5. Implement data persistence across sessions\n6. Create history limit settings\n7. Add search date and time tracking\n8. Implement history item deletion",
+        "testStrategy": "Test adding to search history. Verify persistence across sessions. Test re-search functionality. Ensure history limits work correctly.",
+        "priority": "low",
+        "dependencies": [
+          6,
+          10
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 18,
+        "title": "Implement Property Comparison View",
+        "description": "Create a UI for comparing multiple properties side by side.",
+        "details": "1. Create a comparison service for property data\n2. Implement add/remove from comparison functionality\n3. Create a comparison table UI component\n4. Highlight differences between properties\n5. Add sorting by different attributes\n6. Implement responsive design for comparison view\n7. Create export functionality for comparison data\n8. Add visual indicators for better/worse values",
+        "testStrategy": "Test adding and removing properties from comparison. Verify highlighting of differences. Test sorting functionality. Ensure responsive behavior across screen sizes.",
+        "priority": "low",
+        "dependencies": [
+          9,
+          12
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 19,
+        "title": "Integrate ExtPay Payment System",
+        "description": "Set up the ExtPay payment system for premium subscription handling.",
+        "details": "1. Review existing ExtPay integration in codebase\n2. Set up ExtPay with RentEst product configuration\n3. Implement subscription status checking\n4. Create payment UI components\n5. Add subscription management functionality\n6. Implement upgrade prompts and CTAs\n7. Create webhook handlers for payment events\n8. Add logging for payment-related activities",
+        "testStrategy": "Test subscription status checking. Verify upgrade flow works correctly. Test payment UI components. Ensure webhook handlers process events correctly.",
+        "priority": "high",
+        "dependencies": [
+          1,
+          2
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 20,
+        "title": "Implement Freemium Model and Usage Tracking",
+        "description": "Create the freemium model with usage limits and tracking for the free tier.",
+        "details": "1. Implement usage tracking service\n2. Create quota management for free tier (10-20 lookups/month)\n3. Add usage display in UI\n4. Implement upgrade prompts when nearing limit\n5. Create usage reset logic for monthly cycles\n6. Add premium feature flagging system\n7. Implement A/B testing for upgrade prompts\n8. Create analytics for conversion tracking",
+        "testStrategy": "Test usage tracking with various scenarios. Verify quota enforcement works correctly. Test upgrade prompts at different usage levels. Ensure usage reset works on monthly cycles.",
+        "priority": "high",
+        "dependencies": [
+          19
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 21,
+        "title": "Develop Premium Features",
+        "description": "Implement premium features that are only available to paid subscribers.",
+        "details": "1. Implement feature flag checking in relevant components\n2. Create unlimited rent estimates for premium users\n3. Implement detailed comparable properties (20 vs 5)\n4. Add historical trend data access\n5. Create PDF report generation functionality\n6. Implement custom branding on reports\n7. Add premium-only UI indicators\n8. Create premium onboarding experience",
+        "testStrategy": "Test feature flag enforcement. Verify premium features are only accessible to paid users. Test PDF generation functionality. Ensure premium indicators display correctly.",
+        "priority": "medium",
+        "dependencies": [
+          12,
+          15,
+          19,
+          20
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 22,
+        "title": "Create PDF Report Generation",
+        "description": "Implement functionality to generate and download PDF reports of property data.",
+        "details": "1. Research and integrate a PDF generation library\n2. Create report templates for different data types\n3. Implement property data formatting for reports\n4. Add custom branding options for premium users\n5. Create download functionality\n6. Implement report customization options\n7. Add charts and graphs to reports\n8. Create print-friendly CSS for reports",
+        "testStrategy": "Test PDF generation with various data sets. Verify branding customization works correctly. Test download functionality across browsers. Ensure reports are properly formatted.",
+        "priority": "low",
+        "dependencies": [
+          8,
+          9,
+          12,
+          15,
+          21
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 23,
+        "title": "Implement Performance Optimizations",
+        "description": "Optimize the extension for fast loading and minimal resource usage.",
+        "details": "1. Implement code splitting for faster initial load\n2. Add lazy loading for non-critical components\n3. Optimize API request batching\n4. Implement efficient caching strategies\n5. Reduce bundle size through tree shaking\n6. Add performance monitoring\n7. Optimize images and assets\n8. Implement memory usage optimizations",
+        "testStrategy": "Measure load times before and after optimizations. Test memory usage patterns. Verify bundle size reduction. Ensure the extension still functions correctly after optimizations.",
+        "priority": "medium",
+        "dependencies": [
+          8,
+          9,
+          12,
+          15
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 24,
+        "title": "Prepare Browser Store Submissions",
+        "description": "Prepare all necessary assets and documentation for browser extension store submissions.",
+        "details": "1. Create store listings for Chrome, Firefox, and Edge\n2. Prepare promotional screenshots and images\n3. Write compelling store descriptions\n4. Create promotional videos if needed\n5. Prepare privacy policy and terms of service\n6. Set up developer accounts for each store\n7. Create submission checklist for each platform\n8. Prepare responses for potential review questions",
+        "testStrategy": "Verify all store assets meet platform requirements. Test extension on each target browser. Ensure privacy policy covers all data usage. Review submission materials for completeness.",
+        "priority": "medium",
+        "dependencies": [
+          2,
+          23
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 25,
+        "title": "Implement Analytics and Error Tracking",
+        "description": "Set up analytics and error tracking to monitor extension usage and issues.",
+        "details": "1. Research and integrate privacy-friendly analytics\n2. Set up error tracking and reporting\n3. Implement custom event tracking\n4. Create dashboard for monitoring KPIs\n5. Add user feedback mechanism\n6. Implement A/B testing framework\n7. Create automated alerts for critical issues\n8. Set up regular analytics reporting",
+        "testStrategy": "Verify analytics data is being collected correctly. Test error reporting with simulated errors. Ensure user privacy is maintained. Test A/B testing framework with sample tests.",
+        "priority": "medium",
+        "dependencies": [
+          20,
+          23
+        ],
+        "status": "pending",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-10-26T17:57:49.544Z",
+      "updated": "2025-10-27T14:31:46.322Z",
+      "description": "Tasks for master context"
+    }
+  }
+}

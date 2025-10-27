@@ -1,12 +1,12 @@
 {
-  "name": "Ghost Traffic",
-  "short_name": "Ghost Traffic",
-  "description": "Ghost Traffic is a browser extension that allows you to view the traffic of any website.",
-  "version": "4.3.7",
+  "name": "RentEst - Instant Rent Estimates",
+  "short_name": "RentEst",
+  "description": "Get instant rental price estimates for any property in the US. Powered by RentCast's 140M+ property database.",
+  "version": "1.0.0",
   "manifest_version": 3,
   "browser_specific_settings": {
     "gecko": {
-      "id": "{e7476172-097c-4b77-b56e-f56a894adca9}"
+      "id": "{rentest-rent-estimates@extension}"
     }
   },
   "icons": {
@@ -33,7 +33,7 @@
       "32": "images/logo32.png",
       "48": "images/logo48.png"
     },
-    "default_title": "Customize",
+    "default_title": "RentEst - Get Rent Estimates",
     "default_popup": "customize.html"
   }
 }

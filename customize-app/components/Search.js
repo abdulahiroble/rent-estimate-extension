@@ -7,53 +7,30 @@ const Search = ({ onSearch }) => {
     onSearch(query);
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
   return (
     <div className="flex flex-col items-center w-full max-w-xs">
       <input
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Enter location"
-        className="border border-twitter-accent-one hover:border-twitter-accent-two focus:border-twitter-accent-three rounded py-2 px-4 mb-4 w-full text-black bg-white"
+        onKeyPress={handleKeyPress}
+        placeholder="Enter address or city"
+        className="border-2 border-rentestBorder hover:border-rentestAccent focus:border-rentestPrimary focus:outline-none rounded-lg py-3 px-4 mb-4 w-full text-rentestText bg-white transition-colors"
       />
       <button
-        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full"
+        className="bg-rentestSuccess hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg w-full transition-colors"
         onClick={handleSearch}
       >
-        Search
+        🔍 Search Address
       </button>
     </div>
   );
 };
 
 export default Search;
-
-// import React, { useState } from 'react';
-
-// const Search = ({ onSearch }) => {
-//   const [query, setQuery] = useState('');
-
-//   const handleSearch = () => {
-//     onSearch(query);
-//   };
-
-//   return (
-//     <div className="flex flex-col items-center w-full max-w-xs">
-//       <input
-//         type="text"
-//         value={query}
-//         onChange={(e) => setQuery(e.target.value)}
-//         placeholder="Enter location"
-//         className="border border-gray-300 rounded py-2 px-4 mb-4 w-full"
-//       />
-//       <button
-//         className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full"
-//         onClick={handleSearch}
-//       >
-//         Search
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default Search;

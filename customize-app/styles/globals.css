@@ -21,14 +21,16 @@
 }
 
 :root {
-  --twitter-blue: #1da1f2;
-  --twitter-bg-one: #15202b;
-  --twitter-bg-two: #f7f9f9;
-  --twitter-accent-one: #536471;
-  --twitter-accent-two: #dbe4e6;
-  --twitter-accent-three: #1d9bf0;
-  --twitter-accent-four: #1d9bf01a;
-  --twitter-accent-five: #1a8cd8;
+  --rentest-primary: #2563eb;
+  --rentest-secondary: #1e40af;
+  --rentest-accent: #0ea5e9;
+  --rentest-success: #10b981;
+  --rentest-warning: #f59e0b;
+  --rentest-danger: #ef4444;
+  --rentest-bg-light: #f8fafc;
+  --rentest-bg-dark: #0f172a;
+  --rentest-border: #e2e8f0;
+  --rentest-text: #1e293b;
 }
 
 * {

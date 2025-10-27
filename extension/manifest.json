@@ -1,16 +1,19 @@
 {
-  "name": "RentEst",
+  "name": "RentEst - Instant Rent Estimates",
   "short_name": "RentEst",
-  "description": "RentEst is a browser extension that allows you to view the traffic of any website.",
-  "version": "1.0",
+  "description": "Get instant rental price estimates for any property in the US. Powered by RentCast's 140M+ property database.",
+  "version": "1.0.0",
   "manifest_version": 3,
   "icons": {
-    "16": "images/favicon-16x16.png",
-    "32": "images/favicon-32x32.png",
-    "48": "images/android-icon-48x48.png",
-    "128": "images/favicon-128x128.png"
+    "16": "images/rentest-icon-16.png",
+    "32": "images/rentest-icon-32.png",
+    "48": "images/rentest-icon-48.png",
+    "128": "images/rentest-icon-128.png"
   },
-  "permissions": ["storage", "tabs", "geolocation","nativeMessaging"],
+  "permissions": ["storage", "tabs", "geolocation", "nativeMessaging"],
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; connect-src https://extensionpay.com"
+  },
   "background": {
     "service_worker": "background.js"
   },
@@ -24,11 +27,12 @@
   "host_permissions": ["<all_urls>"],
   "action": {
     "default_icon": {
-      "16": "images/favicon-16x16.png",
-      "32": "images/favicon-32x32.png",
-      "48": "images/android-icon-48x48.png"
+      "16": "images/rentest-icon-16.png",
+      "32": "images/rentest-icon-32.png",
+      "48": "images/rentest-icon-48.png",
+      "128": "images/rentest-icon-128.png"
     },
-    "default_title": "Customize",
+    "default_title": "RentEst - Get Rent Estimates",
     "default_popup": "customize.html"
   }
 }

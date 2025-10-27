@@ -8,14 +8,34 @@ export const getCurrentTabUrl = (callback: (url: string) => void) => {
   };
 
   chrome?.tabs?.query(queryInfo, async (tabs) => {
-    const tab = tabs[0];
-    const url = new URL(tab.url);
-    const domain = url.hostname;
+    try {
+      const tab = tabs[0];
+      if (!tab || !tab.url) {
+        callback(''); // Return empty string if no tab or URL
+        return;
+      }
+      
+      // Skip chrome://, edge://, firefox://, and other browser internal pages
+      if (tab.url.startsWith('chrome://') || 
+          tab.url.startsWith('edge://') || 
+          tab.url.startsWith('firefox://') ||
+          tab.url.startsWith('moz-extension://') ||
+          tab.url.startsWith('chrome-extension://')) {
+        callback(''); // Return empty string for browser internal pages
+        return;
+      }
+      
+      const url = new URL(tab.url);
+      const domain = url.hostname;
 
-    if (domain.includes("www.")) {
-      callback(domain.slice(4));
-    } else {
-      callback(domain);
+      if (domain.includes("www.")) {
+        callback(domain.slice(4));
+      } else {
+        callback(domain);
+      }
+    } catch (error) {
+      console.log('Error getting current tab URL:', error.message);
+      callback(''); // Return empty string on error
     }
   });
 };
@@ -46,10 +66,21 @@ export const handleMessagesFromBackground = () => {
 }
 
 export const sendMessageToBackground = (message: any, callback: any) => {
-  chrome?.runtime?.sendMessage(message, (response) => {
-    // console.log(response)
-    callback(response);
-  });
+  try {
+    chrome?.runtime?.sendMessage(message, (response) => {
+      if (chrome.runtime.lastError) {
+        console.log('Message error:', chrome.runtime.lastError.message);
+        // Handle the error gracefully, maybe return null or a default response
+        callback(null);
+        return;
+      }
+      // console.log(response)
+      callback(response);
+    });
+  } catch (error) {
+    console.log('Error sending message to background:', error.message);
+    callback(null);
+  }
 
   // // 1. Send a message to the service worker requesting the user's data
   // chrome.runtime.sendMessage('get-user-data', (response) => {

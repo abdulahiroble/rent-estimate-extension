@@ -6,18 +6,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        twitterBlue: "#1DA1F2",
-        twitterBgOne: "#ffffff",
-        twitterBgOneDark: "#15202b",
-        twitterBgTwo: "#f7f9f9",
-        twitterBgTwoDark: "#192734",
-        twitterAccentOne: "#536471",
-        twitterAccentOneDark: "#8899a6",
-        twitterAccentTwo: "#dbe4e6",
-        twitterAccentTwoDark: "#38444d",
-        twitterAccentThree: "#1d9bf0",
-        twitterAccentFour: "#1d9bf01a",
-        twitterAccentFive: "#1a8cd8"
+        rentestPrimary: "#2563eb",
+        rentestSecondary: "#1e40af",
+        rentestAccent: "#0ea5e9",
+        rentestSuccess: "#10b981",
+        rentestWarning: "#f59e0b",
+        rentestDanger: "#ef4444",
+        rentestBgLight: "#f8fafc",
+        rentestBgDark: "#0f172a",
+        rentestBorder: "#e2e8f0",
+        rentestText: "#1e293b"
       }
     }
   },

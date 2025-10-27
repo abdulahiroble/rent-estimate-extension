@@ -1,19 +1,19 @@
-import React from 'react';
-import Search from '../components/Search';
+import React from 'react'
+import RentEstimateContainer from './RentEstimateContainer'
 
 const FrontdoorPage = ({ onSelectOption }) => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-custom p-4">
-      <h1 className="text-4xl font-bold mb-8 text-center text-twitter-blue">Welcome to Rent Estimator</h1>
-      <button
-        className="bg-twitter-accent-three hover:bg-twitter-accent-five text-white font-bold py-2 px-4 rounded mb-4 w-full max-w-xs border border-twitter-accent-one shadow-lg cursor-pointer"
-        onClick={() => onSelectOption('currentLocation')}
-      >
-        Get Rent Estimate Based on Current Location
-      </button>
-      <Search onSearch={(query) => onSelectOption('search', query)} />
-    </div>
-  );
-};
+    <div className="flex flex-col items-center justify-center min-h-screen bg-rentestBgLight p-4">
+      <div className="w-full max-w-md mb-8">
+        <h1 className="text-4xl font-bold mb-2 text-center text-rentestPrimary">RentEst</h1>
+        <p className="text-rentestText text-center text-sm">
+          Get instant rental price estimates for any property in the US
+        </p>
+      </div>
 
-export default FrontdoorPage;
+      <RentEstimateContainer />
+    </div>
+  )
+}
+
+export default FrontdoorPage
