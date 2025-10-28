@@ -4,6 +4,8 @@
  * ExtPay runs in background.js, so we communicate via chrome.runtime.sendMessage
  */
 
+import tieredCacheService from './tieredCacheService'
+
 /**
  * Send message to background script
  */
@@ -176,6 +178,26 @@ export async function getRemainingTrialDays() {
   return Math.max(0, remaining)
 }
 
+/**
+ * Sync cache tier with subscription status
+ * Updates tiered cache service with current user tier based on subscription
+ * Should be called on app initialization and when subscription changes
+ */
+export async function syncCacheTierWithSubscription() {
+  try {
+    const details = await getSubscriptionDetails()
+    const tier = details.isPaid ? 'premium' : 'free'
+    tieredCacheService.setUserTier(tier)
+    console.log(`[Payment Service] Cache tier synced: ${tier}`)
+    return tier
+  } catch (error) {
+    console.error('Error syncing cache tier:', error)
+    // Default to free tier on error
+    tieredCacheService.setUserTier('free')
+    return 'free'
+  }
+}
+
 const paymentService = {
   getSubscriptionStatus,
   isSubscriptionActive,
@@ -186,7 +208,8 @@ const paymentService = {
   openLoginPage,
   getUserInfo,
   getSubscriptionStatusText,
-  getRemainingTrialDays
+  getRemainingTrialDays,
+  syncCacheTierWithSubscription
 }
 
 export default paymentService

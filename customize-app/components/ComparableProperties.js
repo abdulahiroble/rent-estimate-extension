@@ -23,7 +23,7 @@ export default function ComparableProperties({ address, city, state, zipCode, on
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1)
-  const [pageSize, setPageSize] = useState(6)
+  const [pageSize, setPageSize] = useState(3)
   const [totalPages, setTotalPages] = useState(0)
 
   // Fetch comparable properties
@@ -131,7 +131,7 @@ export default function ComparableProperties({ address, city, state, zipCode, on
       <div className="mt-8">
         <h2 className="text-2xl font-bold mb-6">🏘️ Comparable Properties</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[...Array(6)].map((_, i) => (
+          {[...Array(3)].map((_, i) => (
             <div key={i} className="bg-gray-200 rounded-lg h-64 animate-pulse" />
           ))}
         </div>
@@ -216,9 +216,9 @@ export default function ComparableProperties({ address, city, state, zipCode, on
             }}
             className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
           >
+            <option value={3}>3 per page</option>
             <option value={6}>6 per page</option>
             <option value={12}>12 per page</option>
-            <option value={20}>20 per page</option>
           </select>
         </div>
       </div>

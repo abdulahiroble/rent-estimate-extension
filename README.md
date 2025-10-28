@@ -82,8 +82,11 @@ RentEst uses the RentCast API to provide:
 
 ## Pricing
 
-- **Free Tier**: 10-20 lookups/month
-- **Pro Tier**: $9.99/month - Unlimited lookups + premium features
+- **Free Tier**: 20 lookups/month (resets monthly)
+- **Premium Tier**: $29.99/month - Unlimited lookups + premium features
+  - 14-day free trial
+  - Cancel anytime
+  - Includes comparable properties, market insights, and more
 
 ## Contributing
 

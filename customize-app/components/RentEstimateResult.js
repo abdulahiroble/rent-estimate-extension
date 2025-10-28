@@ -45,7 +45,7 @@ export default function RentEstimateResult({ estimate, loading, error, onReset }
               }}
               className="w-full bg-rentestPrimary hover:bg-rentestSecondary text-white font-bold py-2 px-4 rounded-lg transition-colors"
             >
-              🚀 Upgrade to Premium
+              🚀 Upgrade to Premium ($29.99/month)
             </button>
             <button
               onClick={() => {

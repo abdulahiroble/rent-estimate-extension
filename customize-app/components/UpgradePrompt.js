@@ -78,7 +78,7 @@ export default function UpgradePrompt({ onDismiss }) {
         onClick={handleUpgrade}
         className="w-full bg-white text-rentestPrimary hover:bg-gray-100 font-bold py-2 px-3 rounded text-sm transition-colors mt-2"
       >
-        Upgrade to Unlimited
+        Upgrade to Premium ($29.99/month)
       </button>
     </div>
   )

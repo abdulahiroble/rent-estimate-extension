@@ -13,7 +13,8 @@ import {
   openTrialPage,
   openLoginPage,
   onPaymentReceived,
-  onTrialStarted
+  onTrialStarted,
+  syncCacheTierWithSubscription
 } from '../services/paymentService'
 
 export function useSubscription() {
@@ -32,6 +33,9 @@ export function useSubscription() {
 
       const details = await getSubscriptionDetails()
       setSubscription(details)
+
+      // Sync cache tier with subscription status
+      await syncCacheTierWithSubscription()
 
       if (details.isTrialActive) {
         const remaining = await getRemainingTrialDays()

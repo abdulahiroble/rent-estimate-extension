@@ -41,18 +41,18 @@ export default function PremiumFeatureGate({
             onClick={startTrial}
             className="w-full bg-rentestAccent hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-lg transition-colors"
           >
-            Start Free Trial
+            Start Free Trial (14 days)
           </button>
           <button
             onClick={upgrade}
             className="w-full bg-rentestPrimary hover:bg-rentestSecondary text-white font-bold py-2 px-4 rounded-lg transition-colors"
           >
-            Upgrade to Premium
+            Upgrade to Premium ($29.99/month)
           </button>
         </div>
 
         <p className="text-rentestText text-xs mt-4">
-          14-day free trial • Cancel anytime
+          14-day free trial • Cancel anytime • Unlimited searches
         </p>
       </div>
     </div>

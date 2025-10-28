@@ -29,6 +29,7 @@ import {
   mockGetMarketStatistics,
   mockSearchProperties
 } from './mockRentcastApi'
+import tieredCacheService from './tieredCacheService'
 
 const API_BASE_URL = 'https://api.rentcast.io/v1'
 const API_KEY = process.env.RENTCAST_API_KEY
@@ -181,7 +182,7 @@ export async function getRentEstimate(address, city, state, zipCode) {
  * @param {string} options.sortBy - Sort field: 'price', 'distance', 'daysOnMarket' (default: 'price')
  * @param {string} options.sortOrder - Sort order: 'asc' or 'desc' (default: 'asc')
  * @param {number} options.page - Page number for pagination (default: 1)
- * @param {number} options.pageSize - Results per page (default: 20, max: 100)
+ * @param {number} options.pageSize - Results per page (default: 3, max: 100)
  * @returns {Promise<Object>} Comparable properties data with pagination metadata
  */
 export async function getComparableProperties(
@@ -199,7 +200,7 @@ export async function getComparableProperties(
       sortBy = 'price',
       sortOrder = 'asc',
       page = 1,
-      pageSize = 20
+      pageSize = 3
     } = options
 
     // Validate parameters
@@ -228,8 +229,8 @@ export async function getComparableProperties(
       { radius, propertyType, sortBy, sortOrder, page, pageSize }
     )
 
-    // Check cache first
-    const cachedData = getComparablePropertiesFromCache(cacheKey)
+    // Check tiered cache first
+    const cachedData = tieredCacheService.getComparablePropertiesFromCache(cacheKey)
     if (cachedData) {
       return cachedData
     }
@@ -270,7 +271,7 @@ export async function getComparableProperties(
           pageSize
         }
       )
-      setComparablePropertiesInCache(cacheKey, emptyResult)
+      tieredCacheService.setComparablePropertiesInCache(cacheKey, emptyResult)
       return emptyResult
     }
 
@@ -285,8 +286,8 @@ export async function getComparableProperties(
       }
     )
 
-    // Cache the result
-    setComparablePropertiesInCache(cacheKey, result)
+    // Cache the result with tiered cache
+    tieredCacheService.setComparablePropertiesInCache(cacheKey, result)
     return result
   } catch (error) {
     cacheStats.errors++
@@ -593,6 +594,7 @@ function generateComparablePropertiesCacheKey(address, city, state, zipCode, opt
 export function clearCache() {
   cache.clear()
   comparablePropertiesCache.clear()
+  tieredCacheService.clearAllCaches()
   console.log('[RentCast Cache] Cleared all cached data')
 }
 
@@ -601,6 +603,7 @@ export function clearCache() {
  */
 export function clearComparablePropertiesCache() {
   comparablePropertiesCache.clear()
+  tieredCacheService.clearComparablePropertiesCache()
   console.log('[RentCast Cache] Cleared comparable properties cache')
 }
 
@@ -608,12 +611,16 @@ export function clearComparablePropertiesCache() {
  * Get cache statistics
  */
 export function getCacheStats() {
+  const tieredStats = tieredCacheService.getCacheStats()
   return {
-    size: cache.size,
-    comparablePropertiesSize: comparablePropertiesCache.size,
-    entries: Array.from(cache.keys()),
-    comparablePropertiesEntries: Array.from(comparablePropertiesCache.keys()),
-    stats: cacheStats
+    legacyCache: {
+      size: cache.size,
+      comparablePropertiesSize: comparablePropertiesCache.size,
+      entries: Array.from(cache.keys()),
+      comparablePropertiesEntries: Array.from(comparablePropertiesCache.keys()),
+      stats: cacheStats
+    },
+    tieredCache: tieredStats
   }
 }
 
@@ -626,6 +633,7 @@ export function resetCacheStats() {
     misses: 0,
     errors: 0
   }
+  tieredCacheService.resetCacheStats()
 }
 
 const rentcastApi = {

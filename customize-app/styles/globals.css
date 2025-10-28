@@ -44,11 +44,11 @@ body,
 }
 
 body {
-  @apply antialiased bg-custom;
+  @apply antialiased bg-white;
 }
 
 #__next {
-  @apply isolate p-2;
+  @apply isolate p-0;
 }
 
 img,
